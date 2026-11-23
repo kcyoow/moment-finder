@@ -1,0 +1,689 @@
+{
+ "job": "298d0e98ac79",
+ "stage": "done",
+ "paused": false,
+ "error": null,
+ "more": false,
+ "log": [
+  "영상 1:04 (1080×1920, 60fps)",
+  "중간 LLM이 계획을 쓰는 중",
+  "계획 쓰는 중: 627토큰까지 씀(GPU 87초). 이어서 씁니다",
+  "계획의 형식이 맞지 않아 한 번 더 씁니다: cup_fill_change: instructions is empty or does not point at `frames`",
+  "계획 쓰는 중: 654토큰까지 씀(GPU 87초). 이어서 씁니다",
+  "계획을 씀: 질문 3개(candy_in_cup, gripper_release, cup_fill_change), 헷갈리는 장면 2개. GPU 234초(호출 4번) · 글 8347토큰 → 답 1652토큰 · 첫 토큰까지 10.04초 · 초당 8.17토큰",
+  "프레임 129장, 위치 64곳(1초마다 4장), 질문 4개(막연한 질문 포함). 물을 위치 64곳, 어림 GPU 56초",
+  "판정 64/64 · 이번 호출 46초(대기 포함 51초), 한 번 읽기 0.180초, 입력 토큰 중앙값 4559",
+  "후보 4개: 0:54~1:02, 0:26~0:31, 0:23~0:28, 0:44~0:50",
+  "다시 확인: 후보 4개 × 프레임 4장씩 두 번 × 질문 3개 = 24번 읽음(GPU 5초). 통과 1개",
+  "찾았습니다. 후보 4개를 다시 확인해 1개가 통과했습니다: 0:54~1:02"
+ ],
+ "plan": {
+  "writer": "Qwen/Qwen3.8-27B-FP8@c3a462cc (transformers FP8, 생각 끔, 검색 없음)",
+  "request": "로봇이 사탕 컵에 넣는 거 성공한 장면 찾아줘",
+  "facts": [
+   "길이 1:04",
+   "화면 1080×1920"
+  ],
+  "feedback": [],
+  "understanding": "로봇팔이 사탕을 집어 컵 안으로 떨어뜨리는 동작이 성공적으로 완료되는 순간을 찾는 것입니다.",
+  "kind": "동작·상태 변화: 사탕이 로봇의 그립퍼에서 분리되어 컵 안으로 들어가는 과정은 시간 순서가 있는 변화이므로 앞뒤 프레임을 함께 봐야 합니다.",
+  "limits": "사탕이 컵 안에 이미 쌓여 있어 추가된 사탕이 잘 보이지 않거나, 로봇팔이 컵 밖에서 사탕을 놓는 실패 장면이 성공으로 오인될 수 있습니다.",
+  "viewer_request": "the moments where the robot successfully puts a candy into the cup",
+  "questions": {
+   "candy_in_cup": {
+    "type": "noul",
+    "instructions": "Do these `frames` show a candy falling from the robot gripper into the cup?",
+    "criteria": {
+     "true": "A candy is seen moving downwards from the robot gripper towards the cup opening, and in a later frame it is inside the cup or just below the rim.",
+     "false": "The candy remains held in the gripper, is dropped outside the cup, or the cup is empty and no candy is falling into it."
+    }
+   },
+   "gripper_release": {
+    "type": "noul",
+    "instructions": "Do these `frames` show the robot gripper opening to release a candy directly above the cup?",
+    "criteria": {
+     "true": "The robot gripper fingers open while holding a candy positioned directly over the cup's opening, and the candy is no longer in the gripper in the subsequent frames.",
+     "false": "The gripper stays closed, opens but the candy is not over the cup, or the candy is already inside the cup without showing the release moment."
+    }
+   },
+   "cup_fill_change": {
+    "type": "score",
+    "instructions": "How clearly do these `frames` show a candy entering the cup from the robot arm?",
+    "criteria": [
+     "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+     "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+     "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+     "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+    ]
+   }
+  },
+  "check": {
+   "target": {
+    "key": "successful_drop",
+    "ko": "사탕이 컵 안으로 들어감",
+    "is": "A candy is seen falling from the robot gripper and landing inside the cup."
+   },
+   "confusers": [
+    {
+     "key": "holding_candy",
+     "ko": "사탕을 들고 있음",
+     "is": "The robot gripper is holding a candy above the cup but has not released it yet."
+    },
+    {
+     "key": "missed_drop",
+     "ko": "컵 밖으로 떨어짐",
+     "is": "A candy falls from the gripper but lands outside the cup on the table."
+    }
+   ],
+   "noul": {
+    "instructions": "Do these frames show a candy successfully falling from the robot gripper into the cup?",
+    "criteria": {
+     "true": "A candy is released from the gripper and lands inside the cup.",
+     "false": "The candy is held, lands outside the cup, or no drop occurs."
+    }
+   }
+  },
+  "raw_reply": "{\n \"understanding\": \"로봇팔이 사탕을 집어 컵 안으로 떨어뜨리는 동작이 성공적으로 완료되는 순간을 찾는 것입니다.\",\n \"looked_up\": \"검색하지 않음\",\n \"kind\": \"동작·상태 변화: 사탕이 로봇의 그립퍼에서 분리되어 컵 안으로 들어가는 과정은 시간 순서가 있는 변화이므로 앞뒤 프레임을 함께 봐야 합니다.\",\n \"viewer_request\": \"the moments where the robot successfully puts a candy into the cup\",\n \"questions\": {\n  \"candy_in_cup\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a candy falling from the robot gripper into the cup?\",\n   \"criteria\": {\n    \"true\": \"A candy is seen moving downwards from the robot gripper towards the cup opening, and in a later frame it is inside the cup or just below the rim.\",\n    \"false\": \"The candy remains held in the gripper, is dropped outside the cup, or the cup is empty and no candy is falling into it.\"\n   }\n  },\n  \"gripper_release\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show the robot gripper opening to release a candy directly above the cup?\",\n   \"criteria\": {\n    \"true\": \"The robot gripper fingers open while holding a candy positioned directly over the cup's opening, and the candy is no longer in the gripper in the subsequent frames.\",\n    \"false\": \"The gripper stays closed, opens but the candy is not over the cup, or the candy is already inside the cup without showing the release moment.\"\n   }\n  },\n  \"cup_fill_change\": {\n   \"type\": \"score\",\n   \"instructions\": \"How clearly do these frames show a candy entering the cup from the robot arm?\",\n   \"criteria\": [\n    \"No candy is seen entering the cup; the cup content level does not change due to a new drop.\",\n    \"A candy is seen near the cup but it is unclear if it enters; the cup content level is static.\",\n    \"A candy is seen falling towards the cup, but the final position inside is not clearly visible.\",\n    \"A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level.\"\n   ]\n  }\n },\n \"limits\": \"사탕이 컵 안에 이미 쌓여 있어 추가된 사탕이 잘 보이지 않거나, 로봇팔이 컵 밖에서 사탕을 놓는 실패 장면이 성공으로 오인될 수 있습니다.\",\n \"check\": {\n  \"target\": {\n   \"key\": \"successful_drop\",\n   \"ko\": \"사탕이 컵 안으로 들어감\",\n   \"is\": \"A candy is seen falling from the robot gripper and landing inside the cup.\"\n  },\n  \"confusers\": [\n   {\n    \"key\": \"holding_candy\",\n    \"ko\": \"사탕을 들고 있음\",\n    \"is\": \"The robot gripper is holding a candy above the cup but has not released it yet.\"\n   },\n   {\n    \"key\": \"missed_drop\",\n    \"ko\": \"컵 밖으로 떨어짐\",\n    \"is\": \"A candy falls from the gripper but lands outside the cup on the table.\"\n   }\n  ],\n  \"noul\": {\n   \"instructions\": \"Do these frames show a candy successfully falling from the robot gripper into the cup?\",\n   \"criteria\": {\n    \"true\": \"A candy is released from the gripper and lands inside the cup.\",\n    \"false\": \"The candy is held, lands outside the cup, or no drop occurs.\"\n   }\n  }\n }\n}",
+  "writer_calls": [
+   {
+    "wall_seconds": 95.3,
+    "prompt_tokens": 8347,
+    "new_tokens": 627,
+    "stop": "time",
+    "gen_seconds": 87.15,
+    "seconds": 87.22,
+    "first_token_seconds": 10.04,
+    "decode_tok_s": 8.12,
+    "room": 87.0,
+    "peak_gb": 43.6
+   },
+   {
+    "wall_seconds": 31.4,
+    "prompt_tokens": 8974,
+    "new_tokens": 199,
+    "stop": "eos",
+    "gen_seconds": 31.25,
+    "seconds": 31.28,
+    "first_token_seconds": 7.0,
+    "decode_tok_s": 8.17,
+    "room": 76.0,
+    "peak_gb": 43.9
+   },
+   {
+    "wall_seconds": 87.3,
+    "prompt_tokens": 9224,
+    "new_tokens": 654,
+    "stop": "time",
+    "gen_seconds": 87.13,
+    "seconds": 87.16,
+    "first_token_seconds": 7.3,
+    "decode_tok_s": 8.18,
+    "room": 87.0,
+    "peak_gb": 44.0
+   },
+   {
+    "wall_seconds": 28.8,
+    "prompt_tokens": 9878,
+    "new_tokens": 172,
+    "stop": "eos",
+    "gen_seconds": 28.64,
+    "seconds": 28.66,
+    "first_token_seconds": 7.7,
+    "decode_tok_s": 8.17,
+    "room": 74.0,
+    "peak_gb": 44.3
+   }
+  ],
+  "format_retries": 1
+ },
+ "result": {
+  "request": "로봇이 사탕 컵에 넣는 거 성공한 장면 찾아줘",
+  "game": "",
+  "proposal": "이렇게 이해했습니다: 로봇팔이 사탕을 집어 컵 안으로 떨어뜨리는 동작이 성공적으로 완료되는 순간을 찾는 것입니다.\n\n- **찾을 장면:** 사탕이 컵 안으로 들어감\n- **헷갈려서 빼려는 장면:** 사탕을 들고 있음, 컵 밖으로 떨어짐\n- **1초마다 볼 것:** candy_in_cup, gripper_release, cup_fill_change (질문 3개)\n- **놓칠 수 있는 것:** 사탕이 컵 안에 이미 쌓여 있어 추가된 사탕이 잘 보이지 않거나, 로봇팔이 컵 밖에서 사탕을 놓는 실패 장면이 성공으로 오인될 수 있습니다.\n\n이대로 찾을까요? 맞으면 **이대로 찾기**를 누르고, 다르면 아래에 고칠 점을 적어 보내 주세요.",
+  "summary": "찾았습니다. 후보 4개를 다시 확인해 **1개**가 통과했습니다: 0:54~1:02",
+  "clips": [
+   {
+    "file": "clip_1.mp4",
+    "label": "0:54~1:02 · 다시 확인 0.78",
+    "start": 54.0,
+    "end": 62.0,
+    "p": 0.7761
+   }
+  ],
+  "columns": [
+   "순위",
+   "시작",
+   "끝",
+   "길이(초)",
+   "다시 확인",
+   "값",
+   "예/아니오",
+   "고르기",
+   "무엇으로 봤나",
+   "후보가 나온 목록"
+  ],
+  "rows": [
+   [
+    1,
+    "0:54",
+    "1:02",
+    8.0,
+    "통과",
+    0.7761,
+    0.7761,
+    0.8018,
+    "사탕이 컵 안으로 들어감",
+    "찾기 봉우리"
+   ],
+   [
+    2,
+    "0:44",
+    "0:50",
+    6.0,
+    "빠짐",
+    0.126,
+    0.212,
+    0.126,
+    "사탕을 들고 있음",
+    "찾기 봉우리"
+   ],
+   [
+    3,
+    "0:26",
+    "0:31",
+    5.0,
+    "빠짐",
+    0.1193,
+    0.1193,
+    0.3698,
+    "사탕이 컵 안으로 들어감",
+    "합친 점수"
+   ],
+   [
+    4,
+    "0:23",
+    "0:28",
+    5.0,
+    "빠짐",
+    0.0941,
+    0.0941,
+    0.2914,
+    "어느 것도 아님",
+    "gripper_release"
+   ]
+  ],
+  "curve": {
+   "초": [
+    0.5,
+    1.5,
+    2.5,
+    3.5,
+    4.5,
+    5.5,
+    6.5,
+    7.5,
+    8.5,
+    9.5,
+    10.5,
+    11.5,
+    12.5,
+    13.5,
+    14.5,
+    15.5,
+    16.5,
+    17.5,
+    18.5,
+    19.5,
+    20.5,
+    21.5,
+    22.5,
+    23.5,
+    24.5,
+    25.5,
+    26.5,
+    27.5,
+    28.5,
+    29.5,
+    30.5,
+    31.5,
+    32.5,
+    33.5,
+    34.5,
+    35.5,
+    36.5,
+    37.5,
+    38.5,
+    39.5,
+    40.5,
+    41.5,
+    42.5,
+    43.5,
+    44.5,
+    45.5,
+    46.5,
+    47.5,
+    48.5,
+    49.5,
+    50.5,
+    51.5,
+    52.5,
+    53.5,
+    54.5,
+    55.5,
+    56.5,
+    57.5,
+    58.5,
+    59.5,
+    60.5,
+    61.5,
+    62.5,
+    63.5
+   ],
+   "점수": [
+    0.1611,
+    0.1392,
+    0.151,
+    0.152,
+    0.1501,
+    0.1488,
+    0.1607,
+    0.153,
+    0.1557,
+    0.1438,
+    0.1862,
+    0.1485,
+    0.1529,
+    0.1636,
+    0.1653,
+    0.175,
+    0.1724,
+    0.2216,
+    0.179,
+    0.1596,
+    0.2245,
+    0.197,
+    0.1939,
+    0.2295,
+    0.2784,
+    0.3116,
+    0.3587,
+    0.2495,
+    0.4241,
+    0.3854,
+    0.2564,
+    0.25,
+    0.2462,
+    0.1401,
+    0.1457,
+    0.1744,
+    0.1755,
+    0.1497,
+    0.1451,
+    0.136,
+    0.1407,
+    0.1488,
+    0.1713,
+    0.3703,
+    0.3527,
+    0.7467,
+    0.7651,
+    0.7481,
+    0.7397,
+    0.583,
+    0.375,
+    0.397,
+    0.355,
+    0.4596,
+    0.6121,
+    0.7071,
+    0.7362,
+    0.7658,
+    0.8448,
+    0.7134,
+    0.7045,
+    0.1691,
+    0.1813,
+    0.1653
+   ]
+  },
+  "log": [
+   "영상 1:04 (1080×1920, 60fps)",
+   "중간 LLM이 계획을 쓰는 중",
+   "계획 쓰는 중: 627토큰까지 씀(GPU 87초). 이어서 씁니다",
+   "계획의 형식이 맞지 않아 한 번 더 씁니다: cup_fill_change: instructions is empty or does not point at `frames`",
+   "계획 쓰는 중: 654토큰까지 씀(GPU 87초). 이어서 씁니다",
+   "계획을 씀: 질문 3개(candy_in_cup, gripper_release, cup_fill_change), 헷갈리는 장면 2개. GPU 234초(호출 4번) · 글 8347토큰 → 답 1652토큰 · 첫 토큰까지 10.04초 · 초당 8.17토큰",
+   "프레임 129장, 위치 64곳(1초마다 4장), 질문 4개(막연한 질문 포함). 물을 위치 64곳, 어림 GPU 56초",
+   "판정 64/64 · 이번 호출 46초(대기 포함 51초), 한 번 읽기 0.180초, 입력 토큰 중앙값 4559",
+   "후보 4개: 0:54~1:02, 0:26~0:31, 0:23~0:28, 0:44~0:50",
+   "다시 확인: 후보 4개 × 프레임 4장씩 두 번 × 질문 3개 = 24번 읽음(GPU 5초). 통과 1개"
+  ],
+  "details": {
+   "plan": {
+    "writer": "Qwen/Qwen3.8-27B-FP8@c3a462cc (transformers FP8, 생각 끔, 검색 없음)",
+    "request": "로봇이 사탕 컵에 넣는 거 성공한 장면 찾아줘",
+    "facts": [
+     "길이 1:04",
+     "화면 1080×1920"
+    ],
+    "feedback": [],
+    "understanding": "로봇팔이 사탕을 집어 컵 안으로 떨어뜨리는 동작이 성공적으로 완료되는 순간을 찾는 것입니다.",
+    "kind": "동작·상태 변화: 사탕이 로봇의 그립퍼에서 분리되어 컵 안으로 들어가는 과정은 시간 순서가 있는 변화이므로 앞뒤 프레임을 함께 봐야 합니다.",
+    "limits": "사탕이 컵 안에 이미 쌓여 있어 추가된 사탕이 잘 보이지 않거나, 로봇팔이 컵 밖에서 사탕을 놓는 실패 장면이 성공으로 오인될 수 있습니다.",
+    "viewer_request": "the moments where the robot successfully puts a candy into the cup",
+    "questions": {
+     "candy_in_cup": {
+      "type": "noul",
+      "instructions": "Do these `frames` show a candy falling from the robot gripper into the cup?",
+      "criteria": {
+       "true": "A candy is seen moving downwards from the robot gripper towards the cup opening, and in a later frame it is inside the cup or just below the rim.",
+       "false": "The candy remains held in the gripper, is dropped outside the cup, or the cup is empty and no candy is falling into it."
+      }
+     },
+     "gripper_release": {
+      "type": "noul",
+      "instructions": "Do these `frames` show the robot gripper opening to release a candy directly above the cup?",
+      "criteria": {
+       "true": "The robot gripper fingers open while holding a candy positioned directly over the cup's opening, and the candy is no longer in the gripper in the subsequent frames.",
+       "false": "The gripper stays closed, opens but the candy is not over the cup, or the candy is already inside the cup without showing the release moment."
+      }
+     },
+     "cup_fill_change": {
+      "type": "score",
+      "instructions": "How clearly do these `frames` show a candy entering the cup from the robot arm?",
+      "criteria": [
+       "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+       "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+       "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+       "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+      ]
+     }
+    },
+    "check": {
+     "target": {
+      "key": "successful_drop",
+      "ko": "사탕이 컵 안으로 들어감",
+      "is": "A candy is seen falling from the robot gripper and landing inside the cup."
+     },
+     "confusers": [
+      {
+       "key": "holding_candy",
+       "ko": "사탕을 들고 있음",
+       "is": "The robot gripper is holding a candy above the cup but has not released it yet."
+      },
+      {
+       "key": "missed_drop",
+       "ko": "컵 밖으로 떨어짐",
+       "is": "A candy falls from the gripper but lands outside the cup on the table."
+      }
+     ],
+     "noul": {
+      "instructions": "Do these frames show a candy successfully falling from the robot gripper into the cup?",
+      "criteria": {
+       "true": "A candy is released from the gripper and lands inside the cup.",
+       "false": "The candy is held, lands outside the cup, or no drop occurs."
+      }
+     }
+    },
+    "writer_calls": [
+     {
+      "wall_seconds": 95.3,
+      "prompt_tokens": 8347,
+      "new_tokens": 627,
+      "stop": "time",
+      "gen_seconds": 87.15,
+      "seconds": 87.22,
+      "first_token_seconds": 10.04,
+      "decode_tok_s": 8.12,
+      "room": 87.0,
+      "peak_gb": 43.6
+     },
+     {
+      "wall_seconds": 31.4,
+      "prompt_tokens": 8974,
+      "new_tokens": 199,
+      "stop": "eos",
+      "gen_seconds": 31.25,
+      "seconds": 31.28,
+      "first_token_seconds": 7.0,
+      "decode_tok_s": 8.17,
+      "room": 76.0,
+      "peak_gb": 43.9
+     },
+     {
+      "wall_seconds": 87.3,
+      "prompt_tokens": 9224,
+      "new_tokens": 654,
+      "stop": "time",
+      "gen_seconds": 87.13,
+      "seconds": 87.16,
+      "first_token_seconds": 7.3,
+      "decode_tok_s": 8.18,
+      "room": 87.0,
+      "peak_gb": 44.0
+     },
+     {
+      "wall_seconds": 28.8,
+      "prompt_tokens": 9878,
+      "new_tokens": 172,
+      "stop": "eos",
+      "gen_seconds": 28.64,
+      "seconds": 28.66,
+      "first_token_seconds": 7.7,
+      "decode_tok_s": 8.17,
+      "room": 74.0,
+      "peak_gb": 44.3
+     }
+    ],
+    "format_retries": 1
+   },
+   "questions": {
+    "worth": {
+     "type": "noul",
+     "instructions": "Would this moment fit `viewer_request`?"
+    },
+    "candy_in_cup": {
+     "type": "noul",
+     "instructions": "Do these `frames` show a candy falling from the robot gripper into the cup?",
+     "criteria": {
+      "true": "A candy is seen moving downwards from the robot gripper towards the cup opening, and in a later frame it is inside the cup or just below the rim.",
+      "false": "The candy remains held in the gripper, is dropped outside the cup, or the cup is empty and no candy is falling into it."
+     }
+    },
+    "gripper_release": {
+     "type": "noul",
+     "instructions": "Do these `frames` show the robot gripper opening to release a candy directly above the cup?",
+     "criteria": {
+      "true": "The robot gripper fingers open while holding a candy positioned directly over the cup's opening, and the candy is no longer in the gripper in the subsequent frames.",
+      "false": "The gripper stays closed, opens but the candy is not over the cup, or the candy is already inside the cup without showing the release moment."
+     }
+    },
+    "cup_fill_change": {
+     "type": "score",
+     "instructions": "How clearly do these `frames` show a candy entering the cup from the robot arm?",
+     "criteria": [
+      "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+      "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+      "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+      "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+     ]
+    }
+   },
+   "base_state": {
+    "viewer_request": "the moments where the robot successfully puts a candy into the cup",
+    "about": "`frames` holds 4 consecutive frames from the video, 0.5 seconds apart, in time order (earliest first)."
+   },
+   "judge_calls": [
+    {
+     "positions": 64,
+     "reads": 256,
+     "gpu_seconds": 46.03,
+     "wall_seconds": 51.3
+    }
+   ],
+   "recheck_call": {
+    "reads": 24,
+    "gpu_seconds": 5.48,
+    "wall_seconds": 13.9
+   },
+   "candidates": [
+    {
+     "id": 1,
+     "start": 54.0,
+     "end": 62.0,
+     "length": 8.0,
+     "peak_t": 58.5,
+     "from": "찾기 봉우리",
+     "score": 0.8448,
+     "times_a": [
+      57.75,
+      58.25,
+      58.75,
+      59.25
+     ],
+     "times_b": [
+      55.0,
+      57.0,
+      59.0,
+      61.0
+     ],
+     "p": 0.7761,
+     "p_noul": 0.7761,
+     "p_choice": 0.8018,
+     "noul_consecutive": 0.8186,
+     "noul_spread": 0.7336,
+     "choice_consecutive": 0.8122,
+     "choice_spread": 0.7914,
+     "options": {
+      "successful_drop": 0.8018,
+      "holding_candy": 0.126,
+      "missed_drop": 0.0489,
+      "none_of_these": 0.0233
+     },
+     "seen_as": "successful_drop",
+     "match": true,
+     "rank": 1
+    },
+    {
+     "id": 4,
+     "start": 44.0,
+     "end": 50.0,
+     "length": 6.0,
+     "peak_t": 46.5,
+     "from": "찾기 봉우리",
+     "score": 0.7651,
+     "times_a": [
+      45.75,
+      46.25,
+      46.75,
+      47.25
+     ],
+     "times_b": [
+      44.75,
+      46.25,
+      47.75,
+      49.25
+     ],
+     "p": 0.126,
+     "p_noul": 0.212,
+     "p_choice": 0.126,
+     "noul_consecutive": 0.1503,
+     "noul_spread": 0.2737,
+     "choice_consecutive": 0.0871,
+     "choice_spread": 0.1648,
+     "options": {
+      "successful_drop": 0.126,
+      "holding_candy": 0.7993,
+      "missed_drop": 0.0477,
+      "none_of_these": 0.027
+     },
+     "seen_as": "holding_candy",
+     "match": false,
+     "rank": 2
+    },
+    {
+     "id": 2,
+     "start": 26.0,
+     "end": 31.0,
+     "length": 5.0,
+     "peak_t": 28.5,
+     "from": "합친 점수",
+     "score": 0.4241,
+     "times_a": [
+      27.75,
+      28.25,
+      28.75,
+      29.25
+     ],
+     "times_b": [
+      26.62,
+      27.88,
+      29.12,
+      30.38
+     ],
+     "p": 0.1193,
+     "p_noul": 0.1193,
+     "p_choice": 0.3698,
+     "noul_consecutive": 0.0972,
+     "noul_spread": 0.1413,
+     "choice_consecutive": 0.267,
+     "choice_spread": 0.4727,
+     "options": {
+      "successful_drop": 0.3698,
+      "holding_candy": 0.1315,
+      "missed_drop": 0.2195,
+      "none_of_these": 0.2791
+     },
+     "seen_as": "successful_drop",
+     "match": false,
+     "rank": 3
+    },
+    {
+     "id": 3,
+     "start": 23.0,
+     "end": 28.0,
+     "length": 5.0,
+     "peak_t": 25.5,
+     "from": "gripper_release",
+     "score": 0.3116,
+     "times_a": [
+      24.75,
+      25.25,
+      25.75,
+      26.25
+     ],
+     "times_b": [
+      23.62,
+      24.88,
+      26.12,
+      27.38
+     ],
+     "p": 0.0941,
+     "p_noul": 0.0941,
+     "p_choice": 0.2914,
+     "noul_consecutive": 0.0928,
+     "noul_spread": 0.0954,
+     "choice_consecutive": 0.2657,
+     "choice_spread": 0.3171,
+     "options": {
+      "successful_drop": 0.2914,
+      "holding_candy": 0.2019,
+      "missed_drop": 0.2034,
+      "none_of_these": 0.3034
+     },
+     "seen_as": "none_of_these",
+     "match": false,
+     "rank": 4
+    }
+   ],
+   "keep_p": 0.5,
+   "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 59.98,
+    "duration": 64.64
+   }
+  }
+ },
+ "wall_seconds": 345.8
+}

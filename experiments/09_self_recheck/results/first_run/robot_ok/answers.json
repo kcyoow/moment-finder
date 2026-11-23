@@ -1,0 +1,1986 @@
+{
+ "0": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.14183328082082688
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.17797963236317155
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.23074857572261223
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.3978962303829983,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7492441210992518,
+    "1": 0.14979231066452572,
+    "2": 0.05478678499019484,
+    "3": 0.046176783246027635
+   },
+   "confidence": 0.7492441210992518
+  }
+ },
+ "1": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1281901310914303
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.14886538121074075
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.1885682766334702
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.33903199806102835,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7918695082068681,
+    "1": 0.11794708790330423,
+    "2": 0.04946530151175899,
+    "3": 0.04071810237806871
+   },
+   "confidence": 0.7918695082068681
+  }
+ },
+ "2": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.13717239891031618
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.18265299995884512
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.18978666836019203
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.3658249493888581,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.773358086719481,
+    "1": 0.1304364296792635,
+    "2": 0.05322793109417207,
+    "3": 0.042977552507083495
+   },
+   "confidence": 0.773358086719481
+  }
+ },
+ "3": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.13854189981537074
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1893384893718871
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.18534021187601266
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.3649427963334343,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7688399336739564,
+    "1": 0.13836004116122555,
+    "2": 0.05181732032224519,
+    "3": 0.0409827048425728
+   },
+   "confidence": 0.7688399336739564
+  }
+ },
+ "4": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.14045502639024424
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.15909444072482434
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.20424454303648443
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.34854665390780115,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7792716525136112,
+    "1": 0.1333883699013068,
+    "2": 0.04686164874875133,
+    "3": 0.04047832883633057
+   },
+   "confidence": 0.7792716525136112
+  }
+ },
+ "5": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1343074146168644
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.17027093921141265
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.20840893365476212
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.33292624964042455,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7971241655300457,
+    "1": 0.11374329951318293,
+    "2": 0.048214654743072675,
+    "3": 0.04091788021369875
+   },
+   "confidence": 0.7971241655300457
+  }
+ },
+ "6": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.13573423421413253
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.19340232030717602
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.2413577004404919
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.36596838939191056,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7662439587659059,
+    "1": 0.14200613793496775,
+    "2": 0.05128745844043617,
+    "3": 0.04046244485869016
+   },
+   "confidence": 0.7662439587659059
+  }
+ },
+ "7": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.13922239961619
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.18557129029721112
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.19632773345091262
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.35450695299896745,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7748090342952635,
+    "1": 0.13577834060092528,
+    "2": 0.049509262913391486,
+    "3": 0.03990336219041973
+   },
+   "confidence": 0.7748090342952635
+  }
+ },
+ "8": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.13783614137579175
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.19481142039283186
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.1933290610642393
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.397617705708368,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7409947308297168,
+    "1": 0.16080937499660247,
+    "2": 0.057779351809276853,
+    "3": 0.040416542364403944
+   },
+   "confidence": 0.7409947308297168
+  }
+ },
+ "9": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.12674241865492158
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.17715931431188092
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.16767109392514393
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.4136413527929469,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7341239521336561,
+    "1": 0.16103249268414865,
+    "2": 0.0619218054377875,
+    "3": 0.042921749744407746
+   },
+   "confidence": 0.7341239521336561
+  }
+ },
+ "10": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1766630698857771
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.21560917391028553
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.24190836110303207
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.3882244473950746,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7568939101414062,
+    "1": 0.14223751515032462,
+    "2": 0.05661879188005752,
+    "3": 0.044249782828211646
+   },
+   "confidence": 0.7568939101414062
+  }
+ },
+ "11": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.13834476901577536
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.16485296753144188
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.1956886318199187
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.34650341556140457,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7929833352870516,
+    "1": 0.1129342893730112,
+    "2": 0.04867799983141857,
+    "3": 0.045404375508518745
+   },
+   "confidence": 0.7929833352870516
+  }
+ },
+ "12": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.13442995947754008
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1926541376293338
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.2023492035112261
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.3577324371746853,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7808632011052232,
+    "1": 0.1239360404677009,
+    "2": 0.05180587857424338,
+    "3": 0.04339487985283253
+   },
+   "confidence": 0.7808632011052232
+  }
+ },
+ "13": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.14832714199143698
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.18632903641874232
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.227431716812169
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.3683706630978582,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7770366094479615,
+    "1": 0.12160427417433228,
+    "2": 0.05731096020959283,
+    "3": 0.044048156168113424
+   },
+   "confidence": 0.7770366094479615
+  }
+ },
+ "14": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.14825993004949872
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.19596399245014745
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.23382832403879805
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.35164596432961776,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7858962130077682,
+    "1": 0.11997121881947302,
+    "2": 0.05072295900813157,
+    "3": 0.0434096091646272
+   },
+   "confidence": 0.7858962130077682
+  }
+ },
+ "15": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15269080209321786
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.20351013216378339
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.2708709662949973
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.3528515999991652,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7895929832468198,
+    "1": 0.11178781381590722,
+    "2": 0.05479382262856067,
+    "3": 0.04382538030871222
+   },
+   "confidence": 0.7895929832468198
+  }
+ },
+ "16": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15249028956812816
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.20234804906228968
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.26101173985212045
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.34038049453933394,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.8013553414861677,
+    "1": 0.10229115978361464,
+    "2": 0.05097116143493341,
+    "3": 0.04538233729528416
+   },
+   "confidence": 0.8013553414861677
+  }
+ },
+ "17": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.18706334990433093
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.2648333261258713
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.36760864472688326
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.4074023735368636,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7511502509776237,
+    "1": 0.13676696890735304,
+    "2": 0.06561293571555915,
+    "3": 0.04646984439946407
+   },
+   "confidence": 0.7511502509776237
+  }
+ },
+ "18": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.14921789807824218
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.20182551232311055
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.303914859945072
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.36226267416234986,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7828080037537443,
+    "1": 0.1163372125092464,
+    "2": 0.05663888955792458,
+    "3": 0.04421589417908477
+   },
+   "confidence": 0.7828080037537443
+  }
+ },
+ "19": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.14288867273503536
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.15299006057461634
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.26053816525095097
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.3460582184430383,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7958170855248612,
+    "1": 0.10639808817896827,
+    "2": 0.05369434862444153,
+    "3": 0.04409047767172898
+   },
+   "confidence": 0.7958170855248612
+  }
+ },
+ "20": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.16847029918203657
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.2892619864759811
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.42362450867186624
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.38599834221404283,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7679156544362113,
+    "1": 0.12403450400163264,
+    "2": 0.06218568647405787,
+    "3": 0.045864155088098144
+   },
+   "confidence": 0.7679156544362113
+  }
+ },
+ "21": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15327055276697316
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.20966557060562802
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.38931546343217943
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.3688184987076889,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.780390538771688,
+    "1": 0.11505234881183803,
+    "2": 0.05990518735357123,
+    "3": 0.044651925062902796
+   },
+   "confidence": 0.780390538771688
+  }
+ },
+ "22": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15486697119411072
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.21743511330232435
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.36019514769779537
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.36299898384810997,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7782877010371402,
+    "1": 0.12105805646538859,
+    "2": 0.060021800109692075,
+    "3": 0.04063244238777908
+   },
+   "confidence": 0.7782877010371402
+  }
+ },
+ "23": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.21042052525520688
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.21079343467624911
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.39904033600103717
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.4075949050689528,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.760350398954409,
+    "1": 0.12188459924579985,
+    "2": 0.06758469957622057,
+    "3": 0.0501803022235706
+   },
+   "confidence": 0.760350398954409
+  }
+ },
+ "24": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.23151902389467177
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.30346635377362013
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.52709699573982
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.4357486562116568,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7392220496893991,
+    "1": 0.14030129852909803,
+    "2": 0.06598259766194967,
+    "3": 0.054494054119553145
+   },
+   "confidence": 0.7392220496893991
+  }
+ },
+ "25": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.2501023812299483
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.3088214351471145
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.6543348710452325
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.4687220533785721,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7013863061911049,
+    "1": 0.17542460301007468,
+    "2": 0.076269822027964,
+    "3": 0.046919268770856476
+   },
+   "confidence": 0.7013863061911049
+  }
+ },
+ "26": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.3521444502089301
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.32447208716202786
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.6173405291375578
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.46266777174374063,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.707952429633023,
+    "1": 0.17172714498586117,
+    "2": 0.07002064938546795,
+    "3": 0.05029977599564785
+   },
+   "confidence": 0.707952429633023
+  }
+ },
+ "27": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.23064854601659457
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.3138293249446161
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.35720339850873506
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.402759576843737,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7523967710765093,
+    "1": 0.14050878752853974,
+    "2": 0.05903253486965547,
+    "3": 0.04806190652529544
+   },
+   "confidence": 0.7523967710765093
+  }
+ },
+ "28": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.4300560656402141
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.5096863308823366
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.5695320131554413
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.5264269267437173,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.6815449171383365,
+    "1": 0.17402099341462032,
+    "2": 0.08089633501203282,
+    "3": 0.06353775443501043
+   },
+   "confidence": 0.6815449171383365
+  }
+ },
+ "29": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.40336302996966505
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.37758224340305435
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.5367076377793243
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.5646696863710062,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.6577067522990178,
+    "1": 0.18339309347595145,
+    "2": 0.09542386978003758,
+    "3": 0.0634762844449932
+   },
+   "confidence": 0.6577067522990178
+  }
+ },
+ "30": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.2075815576716987
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.35637775045403636
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.38010246648477025
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.5377732738809454,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.664867905797788,
+    "1": 0.18503027053157403,
+    "2": 0.09756246766254262,
+    "3": 0.052539356008095395
+   },
+   "confidence": 0.664867905797788
+  }
+ },
+ "31": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.2053990696359892
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.33479096823888216
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.4053240250249327
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.43141745147277166,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7650824418084751,
+    "1": 0.10498055643668347,
+    "2": 0.06337411022843616,
+    "3": 0.06656289152640531
+   },
+   "confidence": 0.7650824418084751
+  }
+ },
+ "32": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.24186813796755455
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.25528853799994905
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.34821536412086956
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.4434855387993716,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7493165227972067,
+    "1": 0.11895605231026739,
+    "2": 0.07065278818847341,
+    "3": 0.061074636704052464
+   },
+   "confidence": 0.7493165227972067
+  }
+ },
+ "33": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.13290696976395083
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.14356345294009049
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.19295832894092055
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.31529703084175453,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.8219881674974494,
+    "1": 0.08487957154075744,
+    "2": 0.04897932358438236,
+    "3": 0.0441529373774108
+   },
+   "confidence": 0.8219881674974494
+  }
+ },
+ "34": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.13678176197372535
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1489529472701218
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.20622898698340542
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.32638027645260514,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.8151576995546108,
+    "1": 0.09011466813043062,
+    "2": 0.047917288622701316,
+    "3": 0.0468103436922573
+   },
+   "confidence": 0.8151576995546108
+  }
+ },
+ "35": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.16304603763059608
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.19537922931054205
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.24753169886891963
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.3434916673553201,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.8095198403838164,
+    "1": 0.0882372083998578,
+    "2": 0.05147439469351519,
+    "3": 0.05076855652281065
+   },
+   "confidence": 0.8095198403838164
+  }
+ },
+ "36": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.14306080239872485
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.2361896219194497
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.27272339779505067
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.34398987355927324,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.8028525443259613,
+    "1": 0.0960496064339637,
+    "2": 0.055353280594915226,
+    "3": 0.04574456864515971
+   },
+   "confidence": 0.8028525443259613
+  }
+ },
+ "37": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1372217319590607
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.15592043089658703
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.2236927206469547
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.32100992560563923,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.8118720807123212,
+    "1": 0.09682406714471255,
+    "2": 0.0497256979679717,
+    "3": 0.04157815417499443
+   },
+   "confidence": 0.8118720807123212
+  }
+ },
+ "38": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.12264176173416175
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1606565894299571
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.24222724674152024
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.29957343767002154,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.823824849622674,
+    "1": 0.09221562182622411,
+    "2": 0.04452076980950828,
+    "3": 0.03943875874159362
+   },
+   "confidence": 0.823824849622674
+  }
+ },
+ "39": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1285236434967643
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.15279595397032578
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.17792696766780491
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.2991325075395678,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.8267870976048459,
+    "1": 0.08782375884476419,
+    "2": 0.044858681956366026,
+    "3": 0.04053046159402387
+   },
+   "confidence": 0.8267870976048459
+  }
+ },
+ "40": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.13214023613307915
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.15601929742484894
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.19188375914743197
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.2998442588510697,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.8280400677449757,
+    "1": 0.08483149228263609,
+    "2": 0.046372553348730555,
+    "3": 0.040755886623657485
+   },
+   "confidence": 0.8280400677449757
+  }
+ },
+ "41": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1332986057223057
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1744900074452678
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.21513496516089647
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.3098088194426031,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.8223281826766111,
+    "1": 0.0878543482015565,
+    "2": 0.047497936124450336,
+    "3": 0.04231953299738196
+   },
+   "confidence": 0.8223281826766111
+  }
+ },
+ "42": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15794273983696852
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.22789856036922856
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.20318670075212572
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.3687267053613562,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7902390970327557,
+    "1": 0.10066687643888964,
+    "2": 0.059222250662597384,
+    "3": 0.049871775865757265
+   },
+   "confidence": 0.7902390970327557
+  }
+ },
+ "43": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.4049137727918529
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.29166939253554774
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.4949172101971874
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.6611981791884484,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.6083485000673337,
+    "1": 0.20703691071888913,
+    "2": 0.0996824991717727,
+    "3": 0.0849320900420046
+   },
+   "confidence": 0.6083485000673337
+  }
+ },
+ "44": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.3609153465581294
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.277935622225504
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.562380706964771
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.5786809976077378,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.6490101739266477,
+    "1": 0.19339191815214055,
+    "2": 0.08750464430803795,
+    "3": 0.0700932636131738
+   },
+   "confidence": 0.6490101739266477
+  }
+ },
+ "45": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.7562748654624479
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.8058959278071621
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.8858918316528729
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 1.5594363986182438,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.2071343766236705,
+    "1": 0.271819623988569,
+    "2": 0.27552122353360664,
+    "3": 0.2455247758541538
+   },
+   "confidence": 0.27552122353360664
+  }
+ },
+ "46": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.7752795700609784
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.8426919848486993
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.8681528637894559
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 1.662196891556002,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.13279736995061797,
+    "1": 0.32346837204250906,
+    "2": 0.29247425450712594,
+    "3": 0.251260003499747
+   },
+   "confidence": 0.32346837204250906
+  }
+ },
+ "47": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.7878517463975151
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.8104876244986443
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.6796415031185468
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 1.9051292173245653,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.11753556177346243,
+    "1": 0.2648884124105027,
+    "2": 0.21248727253404193,
+    "3": 0.4050887532819929
+   },
+   "confidence": 0.4050887532819929
+  }
+ },
+ "48": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.7297150640673329
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.8438273113469354
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.8214504608937709
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 1.751641892197864,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.09563033857188795,
+    "1": 0.29433472572725156,
+    "2": 0.3727976406319691,
+    "3": 0.23723729506889146
+   },
+   "confidence": 0.3727976406319691
+  }
+ },
+ "49": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.5393751437095229
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.647819976267269
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.7370790690792788
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 1.484962455279774,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.13073504228052124,
+    "1": 0.33835210362089296,
+    "2": 0.44612821063687674,
+    "3": 0.08478464346170916
+   },
+   "confidence": 0.44612821063687674
+  }
+ },
+ "50": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.28620489609683575
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.5088668109734606
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.5197693705871274
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 1.0881088731450603,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.25417897005381646,
+    "1": 0.4608417128976179,
+    "2": 0.22767079089825482,
+    "3": 0.0573085261503109
+   },
+   "confidence": 0.4608417128976179
+  }
+ },
+ "51": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.24390052211703112
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.5020187983481591
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.7708687214503939
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 1.132324709832107,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.2280529043936795,
+    "1": 0.46928381528952756,
+    "2": 0.24494894640779916,
+    "3": 0.057714333908993706
+   },
+   "confidence": 0.46928381528952756
+  }
+ },
+ "52": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.31497937727221653
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.3932310724441238
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.4430210974495904
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 1.0471895946019223,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.2612564685665524,
+    "1": 0.4851477127053548,
+    "2": 0.19874557428771075,
+    "3": 0.054850244440382
+   },
+   "confidence": 0.4851477127053548
+  }
+ },
+ "53": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.4323651793178682
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.43640224329109284
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.5941943057852039
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 1.2900014667090705,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.16676777807168153,
+    "1": 0.44837108815438625,
+    "2": 0.3129530227671124,
+    "3": 0.07190811100681982
+   },
+   "confidence": 0.44837108815438625
+  }
+ },
+ "54": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.5232184908099269
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.8220332036019228
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.7854702095418481
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 1.4868237680711296,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.1262888164730467,
+    "1": 0.3592227011829604,
+    "2": 0.41586438014380944,
+    "3": 0.09862410220018344
+   },
+   "confidence": 0.41586438014380944
+  }
+ },
+ "55": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.7360118469383191
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.8126618884074066
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.712548729964203
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 1.5280880385103641,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.1401503252738497,
+    "1": 0.34522397601423416,
+    "2": 0.36101303363961884,
+    "3": 0.1536126650722974
+   },
+   "confidence": 0.36101303363961884
+  }
+ },
+ "56": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.7691220684578587
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.806787440864432
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.7819766363169308
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 1.562919134869151,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.1417411623486659,
+    "1": 0.34438160469295864,
+    "2": 0.32309416869893404,
+    "3": 0.1907830642594414
+   },
+   "confidence": 0.34438160469295864
+  }
+ },
+ "57": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.7804016811649933
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.8218471507421223
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.8603708670954504
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 1.7143875035820466,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.14724205291654338,
+    "1": 0.28753690796649617,
+    "2": 0.2688125217353309,
+    "3": 0.29640851738162954
+   },
+   "confidence": 0.29640851738162954
+  }
+ },
+ "58": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.8150231707636074
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.8921132632263752
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.8958265515081624
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 2.507914691496663,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.0517834560308084,
+    "1": 0.09106915919642222,
+    "2": 0.15459662201806718,
+    "3": 0.7025507627547022
+   },
+   "confidence": 0.7025507627547022
+  }
+ },
+ "59": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.7551168745507145
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.8561250658593365
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.8018110557479622
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 1.071751250245231,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.4264910022567272,
+    "1": 0.2708569432965494,
+    "2": 0.10706185639148848,
+    "3": 0.19559019805523487
+   },
+   "confidence": 0.4264910022567272
+  }
+ },
+ "60": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.6841859307797076
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.8571039688378751
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.8096344385817443
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 1.52280118093474,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.2817884069297192,
+    "1": 0.2422277599372322,
+    "2": 0.14737807840163797,
+    "3": 0.3286057547314106
+   },
+   "confidence": 0.3286057547314106
+  }
+ },
+ "61": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.12937469267196894
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.15982283603479253
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.32543146042936244
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.42408782198961303,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.7238658245845425,
+    "1": 0.17156892456424633,
+    "2": 0.06117685512826669,
+    "3": 0.043388395722944444
+   },
+   "confidence": 0.7238658245845425
+  }
+ },
+ "62": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1448258325950662
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.16698778130298508
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.291459602605375
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.5846581291088326,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.5848108709530573,
+    "1": 0.29451982680436645,
+    "2": 0.0718696044232625,
+    "3": 0.04879969781931373
+   },
+   "confidence": 0.5848108709530573
+  }
+ },
+ "63": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1396610430358452
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.17625340200448641
+  },
+  "gripper_release": {
+   "type": "noul",
+   "noul": 0.2375171199236604
+  },
+  "cup_fill_change": {
+   "type": "score",
+   "score": 0.476583122290478,
+   "legend": {
+    "0": "No candy is seen entering the cup; the cup content level does not change due to a new drop.",
+    "1": "A candy is seen near the cup but it is unclear if it enters; the cup content level is static.",
+    "2": "A candy is seen falling towards the cup, but the final position inside is not clearly visible.",
+    "3": "A candy is clearly seen falling from the gripper and landing inside the cup, increasing the fill level."
+   },
+   "probabilities": {
+    "0": 0.6699046598543954,
+    "1": 0.22761903951151322,
+    "2": 0.05846481912330926,
+    "3": 0.044011481510782095
+   },
+   "confidence": 0.6699046598543954
+  }
+ }
+}

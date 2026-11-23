@@ -1,0 +1,93 @@
+{
+ "writer": "Qwen/Qwen3.8-27B-FP8@c3a462cc (transformers FP8, 생각 끔, 검색 없음)",
+ "request": "마크 영상인데 다이아 캐는 장면 찾아줘",
+ "facts": [
+  "길이 5:00",
+  "화면 640×360"
+ ],
+ "feedback": [],
+ "understanding": "마인크래프트 영상에서 다이아몬드(다이아)를 채굴하는 장면을 찾는 것입니다.",
+ "kind": "동작·상태 변화: '캐다'라는 동작은 시간의 흐름에 따라 블록이 깨지고 아이템이 나오는 변화를 포함하므로, 앞뒤 프레임을 함께 봐야 판단할 수 있습니다.",
+ "limits": "다이아몬드를 채굴한 직후 인벤토리에 넣는 순간이나, 이미 채굴된 다이아를 들고 있는 장면은 놓칠 수 있습니다. 또한 화면에 다이아 블록이 보이지만 채굴 동작이 아닌 경우(예: 그냥 바라보기)는 'mining_action' 질문에서 제외되므로, 'diamond_block_visible'만 높게 나오는 구간은 후보로 남을 수 있습니다.",
+ "viewer_request": "the moments where the player mines diamonds",
+ "questions": {
+  "diamond_block_visible": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a diamond ore block or a diamond item?",
+   "criteria": {
+    "true": "A diamond ore block (grey stone with bright cyan specks) or a diamond item (bright cyan gem) is clearly visible in the scene.",
+    "false": "No diamond ore or diamond item is visible. Other ores (coal, iron, gold, emerald) or items do not count."
+   }
+  },
+  "mining_action": {
+   "type": "noul",
+   "instructions": "Do these `frames` show the player actively mining a diamond ore block?",
+   "criteria": {
+    "true": "The player is looking at and attacking a diamond ore block, and the block shows crack textures or is breaking.",
+    "false": "The player is not mining a diamond ore. Standing near a diamond, mining other blocks, or looking at a diamond without attacking it do not count."
+   }
+  },
+  "diamond_drop": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a diamond item dropping from a broken block?",
+   "criteria": {
+    "true": "A diamond item is seen floating in the air, having just dropped from a block.",
+    "false": "No diamond item is dropping. Diamonds already in the inventory, diamonds in a chest, or diamonds held in hand do not count."
+   }
+  }
+ },
+ "check": {
+  "target": {
+   "key": "mining_diamond",
+   "ko": "다이아 채굴 중",
+   "is": "Player is attacking a diamond ore block, cracks are visible, or a diamond item is dropping."
+  },
+  "confusers": [
+   {
+    "key": "looking_at_diamond",
+    "ko": "다이아 바라보기",
+    "is": "Player is looking at a diamond ore or holding a diamond, but not actively mining or breaking it."
+   },
+   {
+    "key": "mining_other_ore",
+    "ko": "다른 광물 채굴",
+    "is": "Player is mining coal, iron, gold, or emerald ore. The block does not have bright cyan specks."
+   }
+  ],
+  "noul": {
+   "instructions": "Do these frames show the player actively mining a diamond ore block or a diamond item dropping?",
+   "criteria": {
+    "true": "The player is attacking a diamond ore block (cracks visible) or a diamond item is dropping from a block.",
+    "false": "The player is not mining a diamond ore. Looking at a diamond, holding a diamond, or mining other ores do not count."
+   }
+  }
+ },
+ "raw_reply": "{\n \"understanding\": \"마인크래프트 영상에서 다이아몬드(다이아)를 채굴하는 장면을 찾는 것입니다.\",\n \"looked_up\": \"검색하지 않음\",\n \"kind\": \"동작·상태 변화: '캐다'라는 동작은 시간의 흐름에 따라 블록이 깨지고 아이템이 나오는 변화를 포함하므로, 앞뒤 프레임을 함께 봐야 판단할 수 있습니다.\",\n \"viewer_request\": \"the moments where the player mines diamonds\",\n \"questions\": {\n  \"diamond_block_visible\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a diamond ore block or a diamond item?\",\n   \"criteria\": {\n    \"true\": \"A diamond ore block (grey stone with bright cyan specks) or a diamond item (bright cyan gem) is clearly visible in the scene.\",\n    \"false\": \"No diamond ore or diamond item is visible. Other ores (coal, iron, gold, emerald) or items do not count.\"\n   }\n  },\n  \"mining_action\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show the player actively mining a diamond ore block?\",\n   \"criteria\": {\n    \"true\": \"The player is looking at and attacking a diamond ore block, and the block shows crack textures or is breaking.\",\n    \"false\": \"The player is not mining a diamond ore. Standing near a diamond, mining other blocks, or looking at a diamond without attacking it do not count.\"\n   }\n  },\n  \"diamond_drop\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a diamond item dropping from a broken block?\",\n   \"criteria\": {\n    \"true\": \"A diamond item is seen floating in the air, having just dropped from a block.\",\n    \"false\": \"No diamond item is dropping. Diamonds already in the inventory, diamonds in a chest, or diamonds held in hand do not count.\"\n   }\n  }\n },\n \"limits\": \"다이아몬드를 채굴한 직후 인벤토리에 넣는 순간이나, 이미 채굴된 다이아를 들고 있는 장면은 놓칠 수 있습니다. 또한 화면에 다이아 블록이 보이지만 채굴 동작이 아닌 경우(예: 그냥 바라보기)는 'mining_action' 질문에서 제외되므로, 'diamond_block_visible'만 높게 나오는 구간은 후보로 남을 수 있습니다.\",\n \"check\": {\n  \"target\": {\n   \"key\": \"mining_diamond\",\n   \"ko\": \"다이아 채굴 중\",\n   \"is\": \"Player is attacking a diamond ore block, cracks are visible, or a diamond item is dropping.\"\n  },\n  \"confusers\": [\n   {\n    \"key\": \"looking_at_diamond\",\n    \"ko\": \"다이아 바라보기\",\n    \"is\": \"Player is looking at a diamond ore or holding a diamond, but not actively mining or breaking it.\"\n   },\n   {\n    \"key\": \"mining_other_ore\",\n    \"ko\": \"다른 광물 채굴\",\n    \"is\": \"Player is mining coal, iron, gold, or emerald ore. The block does not have bright cyan specks.\"\n   }\n  ],\n  \"noul\": {\n   \"instructions\": \"Do these frames show the player actively mining a diamond ore block or a diamond item dropping?\",\n   \"criteria\": {\n    \"true\": \"The player is attacking a diamond ore block (cracks visible) or a diamond item is dropping from a block.\",\n    \"false\": \"The player is not mining a diamond ore. Looking at a diamond, holding a diamond, or mining other ores do not count.\"\n   }\n  }\n }\n}",
+ "writer_calls": [
+  {
+   "wall_seconds": 107.5,
+   "prompt_tokens": 8339,
+   "new_tokens": 805,
+   "stop": "time",
+   "gen_seconds": 104.15,
+   "seconds": 104.21,
+   "first_token_seconds": 7.91,
+   "decode_tok_s": 8.35,
+   "room": 104.0,
+   "peak_gb": 43.6
+  },
+  {
+   "wall_seconds": 9.9,
+   "prompt_tokens": 9144,
+   "new_tokens": 20,
+   "stop": "eos",
+   "gen_seconds": 9.74,
+   "seconds": 9.76,
+   "first_token_seconds": 7.27,
+   "decode_tok_s": 7.69,
+   "room": 103.0,
+   "peak_gb": 44.0
+  }
+ ],
+ "format_retries": 0
+}

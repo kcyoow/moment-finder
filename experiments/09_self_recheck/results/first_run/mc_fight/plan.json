@@ -1,0 +1,83 @@
+{
+ "writer": "Qwen/Qwen3.8-27B-FP8@c3a462cc (transformers FP8, 생각 끔, 검색 없음)",
+ "request": "마크 영상인데 싸우는 장면 뽑아줘",
+ "facts": [
+  "길이 4:59",
+  "화면 640×360"
+ ],
+ "feedback": [],
+ "understanding": "마크(Mark)가 포함된 영상에서 캐릭터들이 서로 물리적으로 충돌하거나 공격하는 전투 장면을 찾는 것입니다.",
+ "kind": "동작·상태 변화: 공격이나 피격 같은 물리적 상호작용은 시간 흐름에 따른 움직임이 필요하므로 4장 묶음으로 확인해야 합니다.",
+ "limits": "화면 밖에서 일어나는 전투나, 정지된 자세로만 보이는 준비 동작은 놓칠 수 있습니다. 소리나 효과음으로만 구분되는 충돌은 판정할 수 없습니다.",
+ "viewer_request": "fighting scenes",
+ "questions": {
+  "physical_combat": {
+   "type": "noul",
+   "instructions": "Do these `frames` show characters engaging in physical combat, such as punching, kicking, or striking each other?",
+   "criteria": {
+    "true": "At least two characters are physically interacting in a combat manner, with visible motion of limbs or bodies colliding.",
+    "false": "Characters are standing still, walking, or talking without physical contact. One character attacking a static object or environment does not count."
+   }
+  },
+  "weapon_impact": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a weapon or projectile hitting a character or causing a visible impact?",
+   "criteria": {
+    "true": "A weapon (sword, gun, etc.) or projectile is seen making contact with a character, or a character is seen reacting to a hit with a visible impact effect.",
+    "false": "Weapons are being held or aimed but no impact is visible. Characters are moving without any visible hit or impact."
+   }
+  },
+  "combat_intensity": {
+   "type": "score",
+   "instructions": "Rate the intensity of physical conflict visible in these `frames`.",
+   "criteria": [
+    "No physical conflict or combat is visible.",
+    "Minor scuffle or light contact between characters.",
+    "Clear exchange of blows or attacks between characters.",
+    "Intense, rapid, or heavy combat with multiple impacts or dramatic movements."
+   ]
+  }
+ },
+ "check": {
+  "target": {
+   "key": "active_fight",
+   "ko": "적극적인 전투",
+   "is": "Characters are actively exchanging blows, with visible motion of attacks and reactions."
+  },
+  "confusers": [
+   {
+    "key": "idle_stance",
+    "ko": "대기 자세",
+    "is": "Characters are standing in a combat-ready pose but no movement or contact is occurring."
+   },
+   {
+    "key": "chase_sequence",
+    "ko": "추격 장면",
+    "is": "Characters are running towards or away from each other without physical contact or attacks."
+   }
+  ],
+  "noul": {
+   "instructions": "Do these frames show active physical combat where characters are hitting each other?",
+   "criteria": {
+    "true": "Visible physical contact or impact between characters, such as punches, kicks, or weapon strikes connecting.",
+    "false": "Characters are merely posing, chasing, or standing still without any physical impact or exchange of blows."
+   }
+  }
+ },
+ "raw_reply": "{\n \"understanding\": \"마크(Mark)가 포함된 영상에서 캐릭터들이 서로 물리적으로 충돌하거나 공격하는 전투 장면을 찾는 것입니다.\",\n \"looked_up\": \"검색하지 않음\",\n \"kind\": \"동작·상태 변화: 공격이나 피격 같은 물리적 상호작용은 시간 흐름에 따른 움직임이 필요하므로 4장 묶음으로 확인해야 합니다.\",\n \"viewer_request\": \"fighting scenes\",\n \"questions\": {\n  \"physical_combat\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show characters engaging in physical combat, such as punching, kicking, or striking each other?\",\n   \"criteria\": {\n    \"true\": \"At least two characters are physically interacting in a combat manner, with visible motion of limbs or bodies colliding.\",\n    \"false\": \"Characters are standing still, walking, or talking without physical contact. One character attacking a static object or environment does not count.\"\n   }\n  },\n  \"weapon_impact\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a weapon or projectile hitting a character or causing a visible impact?\",\n   \"criteria\": {\n    \"true\": \"A weapon (sword, gun, etc.) or projectile is seen making contact with a character, or a character is seen reacting to a hit with a visible impact effect.\",\n    \"false\": \"Weapons are being held or aimed but no impact is visible. Characters are moving without any visible hit or impact.\"\n   }\n  },\n  \"combat_intensity\": {\n   \"type\": \"score\",\n   \"instructions\": \"Rate the intensity of physical conflict visible in these frames.\",\n   \"criteria\": [\n    \"No physical conflict or combat is visible.\",\n    \"Minor scuffle or light contact between characters.\",\n    \"Clear exchange of blows or attacks between characters.\",\n    \"Intense, rapid, or heavy combat with multiple impacts or dramatic movements.\"\n   ]\n  }\n },\n \"limits\": \"화면 밖에서 일어나는 전투나, 정지된 자세로만 보이는 준비 동작은 놓칠 수 있습니다. 소리나 효과음으로만 구분되는 충돌은 판정할 수 없습니다.\",\n \"check\": {\n  \"target\": {\n   \"key\": \"active_fight\",\n   \"ko\": \"적극적인 전투\",\n   \"is\": \"Characters are actively exchanging blows, with visible motion of attacks and reactions.\"\n  },\n  \"confusers\": [\n   {\n    \"key\": \"idle_stance\",\n    \"ko\": \"대기 자세\",\n    \"is\": \"Characters are standing in a combat-ready pose but no movement or contact is occurring.\"\n   },\n   {\n    \"key\": \"chase_sequence\",\n    \"ko\": \"추격 장면\",\n    \"is\": \"Characters are running towards or away from each other without physical contact or attacks.\"\n   }\n  ],\n  \"noul\": {\n   \"instructions\": \"Do these frames show active physical combat where characters are hitting each other?\",\n   \"criteria\": {\n    \"true\": \"Visible physical contact or impact between characters, such as punches, kicks, or weapon strikes connecting.\",\n    \"false\": \"Characters are merely posing, chasing, or standing still without any physical impact or exchange of blows.\"\n   }\n  }\n }\n}",
+ "writer_calls": [
+  {
+   "wall_seconds": 103.9,
+   "prompt_tokens": 8338,
+   "new_tokens": 731,
+   "stop": "eos",
+   "gen_seconds": 98.96,
+   "seconds": 99.02,
+   "first_token_seconds": 7.95,
+   "decode_tok_s": 8.02,
+   "room": 104.0,
+   "peak_gb": 43.6
+  }
+ ],
+ "format_retries": 0
+}

@@ -1,0 +1,88 @@
+{
+ "writer": "Qwen/Qwen3.8-27B-FP8@c3a462cc (transformers FP8, 생각 끔, 검색 없음)",
+ "request": "로봇이 사탕 컵에 넣는 거 성공한 장면 찾아줘",
+ "facts": [
+  "길이 1:12",
+  "화면 1080×1920"
+ ],
+ "feedback": [],
+ "understanding": "로봇 팔이 사탕을 집어 컵 안으로 떨어뜨려 넣는 동작이 성공적으로 완료되는 순간을 찾는 것입니다.",
+ "kind": "동작·상태 변화: 사탕이 컵 밖에서 컵 안으로 위치가 바뀌는 순간을 확인해야 하므로 앞뒤 프레임이 필요합니다.",
+ "limits": "컵이 너무 작거나 사탕이 컵 안으로 들어가는 순간이 프레임 간격(0.5초) 사이에 지나가면 놓칠 수 있습니다. 컵 안에 이미 사탕이 여러 개 있어 새 사탕이 들어가는 것을 구분하기 어려울 수 있습니다.",
+ "viewer_request": "the moments where the robot successfully puts a candy into the cup",
+ "questions": {
+  "candy_in_cup": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a candy being released by a robot gripper and falling into an open cup?",
+   "criteria": {
+    "true": "A robot gripper opens to release a candy, and the candy is seen moving downward into the interior of a cup.",
+    "false": "The robot is holding the candy but has not released it, the candy is being picked up from the cup, the cup is empty and no candy is entering it, or the candy is dropped outside the cup."
+   }
+  },
+  "gripper_open": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a robot gripper opening its fingers while positioned directly above a cup?",
+   "criteria": {
+    "true": "The robot's gripper fingers move apart (open) while the gripper is located over the opening of a cup.",
+    "false": "The gripper is closed, the gripper is moving sideways without being over a cup, or the gripper is opening but not over a cup."
+   }
+  },
+  "drop_success": {
+   "type": "score",
+   "instructions": "How clearly do these `frames` show a candy entering the cup from the robot's gripper?",
+   "criteria": [
+    "No candy is seen entering the cup.",
+    "A candy is seen near the cup but not clearly entering it.",
+    "A candy is seen falling towards the cup opening.",
+    "A candy is clearly seen falling into the cup and disappearing into the interior."
+   ]
+  }
+ },
+ "check": {
+  "target": {
+   "key": "success_drop",
+   "ko": "사탕이 컵 안으로 들어감",
+   "is": "A candy is seen falling from a robot gripper into the open top of a cup and disappearing inside."
+  },
+  "confusers": [
+   {
+    "key": "holding_over",
+    "ko": "컵 위에서 사탕 들고 있음",
+    "is": "A robot gripper is holding a candy directly above the cup, but the gripper is closed and the candy has not been released."
+   },
+   {
+    "key": "missed_drop",
+    "ko": "컵 밖으로 떨어짐",
+    "is": "A candy is seen falling from a robot gripper but lands on the table or outside the cup, not entering the cup's interior."
+   },
+   {
+    "key": "picking_up",
+    "ko": "컵에서 사탕 집어냄",
+    "is": "A robot gripper is reaching into a cup and closing its fingers around a candy to lift it out."
+   }
+  ],
+  "noul": {
+   "instructions": "Do these frames show a robot successfully dropping a candy into a cup?",
+   "criteria": {
+    "true": "A candy is released from a robot gripper and falls into the interior of a cup.",
+    "false": "The robot is holding a candy, dropping it outside the cup, picking a candy out of the cup, or no candy is interacting with the cup."
+   }
+  }
+ },
+ "raw_reply": "{\n \"understanding\": \"로봇 팔이 사탕을 집어 컵 안으로 떨어뜨려 넣는 동작이 성공적으로 완료되는 순간을 찾는 것입니다.\",\n \"looked_up\": \"검색하지 않음\",\n \"kind\": \"동작·상태 변화: 사탕이 컵 밖에서 컵 안으로 위치가 바뀌는 순간을 확인해야 하므로 앞뒤 프레임이 필요합니다.\",\n \"viewer_request\": \"the moments where the robot successfully puts a candy into the cup\",\n \"questions\": {\n  \"candy_in_cup\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a candy being released by a robot gripper and falling into an open cup?\",\n   \"criteria\": {\n    \"true\": \"A robot gripper opens to release a candy, and the candy is seen moving downward into the interior of a cup.\",\n    \"false\": \"The robot is holding the candy but has not released it, the candy is being picked up from the cup, the cup is empty and no candy is entering it, or the candy is dropped outside the cup.\"\n   }\n  },\n  \"gripper_open\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a robot gripper opening its fingers while positioned directly above a cup?\",\n   \"criteria\": {\n    \"true\": \"The robot's gripper fingers move apart (open) while the gripper is located over the opening of a cup.\",\n    \"false\": \"The gripper is closed, the gripper is moving sideways without being over a cup, or the gripper is opening but not over a cup.\"\n   }\n  },\n  \"drop_success\": {\n   \"type\": \"score\",\n   \"instructions\": \"How clearly do these frames show a candy entering the cup from the robot's gripper?\",\n   \"criteria\": [\n    \"No candy is seen entering the cup.\",\n    \"A candy is seen near the cup but not clearly entering it.\",\n    \"A candy is seen falling towards the cup opening.\",\n    \"A candy is clearly seen falling into the cup and disappearing into the interior.\"\n   ]\n  }\n },\n \"limits\": \"컵이 너무 작거나 사탕이 컵 안으로 들어가는 순간이 프레임 간격(0.5초) 사이에 지나가면 놓칠 수 있습니다. 컵 안에 이미 사탕이 여러 개 있어 새 사탕이 들어가는 것을 구분하기 어려울 수 있습니다.\",\n \"check\": {\n  \"target\": {\n   \"key\": \"success_drop\",\n   \"ko\": \"사탕이 컵 안으로 들어감\",\n   \"is\": \"A candy is seen falling from a robot gripper into the open top of a cup and disappearing inside.\"\n  },\n  \"confusers\": [\n   {\n    \"key\": \"holding_over\",\n    \"ko\": \"컵 위에서 사탕 들고 있음\",\n    \"is\": \"A robot gripper is holding a candy directly above the cup, but the gripper is closed and the candy has not been released.\"\n   },\n   {\n    \"key\": \"missed_drop\",\n    \"ko\": \"컵 밖으로 떨어짐\",\n    \"is\": \"A candy is seen falling from a robot gripper but lands on the table or outside the cup, not entering the cup's interior.\"\n   },\n   {\n    \"key\": \"picking_up\",\n    \"ko\": \"컵에서 사탕 집어냄\",\n    \"is\": \"A robot gripper is reaching into a cup and closing its fingers around a candy to lift it out.\"\n   }\n  ],\n  \"noul\": {\n   \"instructions\": \"Do these frames show a robot successfully dropping a candy into a cup?\",\n   \"criteria\": {\n    \"true\": \"A candy is released from a robot gripper and falls into the interior of a cup.\",\n    \"false\": \"The robot is holding a candy, dropping it outside the cup, picking a candy out of the cup, or no candy is interacting with the cup.\"\n   }\n  }\n }\n}",
+ "writer_calls": [
+  {
+   "wall_seconds": 56.1,
+   "prompt_tokens": 8561,
+   "new_tokens": 896,
+   "stop": "eos",
+   "gen_seconds": 56.04,
+   "seconds": 56.05,
+   "first_token_seconds": 3.32,
+   "decode_tok_s": 16.98,
+   "room": 99.0,
+   "peak_gb": 43.5
+  }
+ ],
+ "format_retries": 0
+}

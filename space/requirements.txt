@@ -1,0 +1,18 @@
+transformers==5.20.2
+accelerate
+torchvision
+pillow
+numpy
+imageio-ffmpeg
+pandas
+# 중간 LLM(Qwen3.8-27B-FP8)의 FP8 층은 kernels-community/finegrained-fp8 Triton 커널을 hub에서 받아 쓴다(대신할 PyTorch 경로가 없다).
+# transformers 5.20.2는 kernels 0.17.2 이상 0.18 미만만 받는다(0.18.3이 깔려 시작이 실패했음, 2026-11-18)
+kernels>=0.17.2,<0.18
+# tqdm 4.70.0에서 kernels가 hub 커널을 받다가 실패한다는 공개 Space(limegreenpeper1/Chat-Qwen-Qwen3.8-27B-FP8)의 기록을 따라 막아 둔다
+tqdm<4.70
+# Qwen3.5 구조(중간 LLM과 판정 모델 둘 다)의 짧은 합성곱만 미리 빌드된 CUDA 커널로 돌린다. 이 Space의 torch 2.13.0+cu130에 맞춘 Astral 빌드를 주소로 받는다
+# (--extra-index-url을 쓰면 torchvision 같은 다른 패키지까지 그 색인에서 고를 수 있어 피한다).
+# flash-linear-attention(Triton)은 넣었다가 뺐다: 넣은 뒤 첫 호출이 첫 토큰까지 66초(빼고 37초), 초당 1.4토큰이었다(2026-11-18).
+# 새 프로세스의 첫 호출에서 Triton 커널을 컴파일하고 자동 조정하는 시간이 FP8 커널 몫과 겹친 것으로 본다(나눠 재지는 않았다).
+# 선형 주의 층은 transformers의 PyTorch 구현으로 돈다
+causal-conv1d @ https://wheels.astral.sh/artifacts/b8b7d03b1cafb306f9e89d8d195ece8c296417d8be00b55c4b809b018f77a99b/causal_conv1d-1.7.0+cu.13.0.torch.2.13-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl

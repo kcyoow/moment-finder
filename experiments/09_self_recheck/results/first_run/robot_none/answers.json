@@ -1,0 +1,2234 @@
+{
+ "0": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.19227994779991867
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.13775665815548963
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.3455041030652195,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.2352582845239744,
+    "1": 0.3541160859389998,
+    "2": 0.24048887148485773,
+    "3": 0.1701367580521681
+   },
+   "confidence": 0.3541160859389998
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.7864301149022728
+  }
+ },
+ "1": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1572953102411371
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.13095893265701844
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.4867020743721133,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.20149254115731183,
+    "1": 0.2698103431079355,
+    "2": 0.36919961594007994,
+    "3": 0.15949749979467265
+   },
+   "confidence": 0.36919961594007994
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.6483486232940285
+  }
+ },
+ "2": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.16064893792404417
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.11781158802493037
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.0047234849724538,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.33620768945654794,
+    "1": 0.43314381690603815,
+    "2": 0.12036581284582583,
+    "3": 0.110282680791588
+   },
+   "confidence": 0.43314381690603815
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.32589577419453913
+  }
+ },
+ "3": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.14697028047527214
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12591106144347336
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8296392804426376,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.4099883448581537,
+    "1": 0.43108338406739455,
+    "2": 0.0782289168481122,
+    "3": 0.08069935422633953
+   },
+   "confidence": 0.43108338406739455
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.23093043332218643
+  }
+ },
+ "4": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15282280682740004
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.14720818904463245
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.3396170854984555,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.23201933548889125,
+    "1": 0.4004759927947012,
+    "2": 0.1633729224454685,
+    "3": 0.20413174927093913
+   },
+   "confidence": 0.4004759927947012
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.4259158019549221
+  }
+ },
+ "5": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.3308205102577618
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.2325012861408798
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.4896347463908044,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.18346962129336103,
+    "1": 0.40591011515864145,
+    "2": 0.14813615941182975,
+    "3": 0.26248410413616785
+   },
+   "confidence": 0.40591011515864145
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.7511432005790728
+  }
+ },
+ "6": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1842337999239802
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1304840049927282
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8218724012128055,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.4029855347929688,
+    "1": 0.45382852452311995,
+    "2": 0.061513945362048156,
+    "3": 0.08167199532186308
+   },
+   "confidence": 0.45382852452311995
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.4736974080393152
+  }
+ },
+ "7": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.18918995944141945
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.11919170795343569
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8333545586846153,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.3936413942498528,
+    "1": 0.4626458056595171,
+    "2": 0.06042964724679225,
+    "3": 0.0832831528438379
+   },
+   "confidence": 0.4626458056595171
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.474705611215512
+  }
+ },
+ "8": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1636822493216213
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.13848545516276023
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9283713694547829,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.3394540097012589,
+    "1": 0.48981238644822644,
+    "2": 0.07364182854498734,
+    "3": 0.09709177530552726
+   },
+   "confidence": 0.48981238644822644
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.4026786975097657
+  }
+ },
+ "9": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.19593784801874603
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1732138274274496
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.080082785215545,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.2946591164912686,
+    "1": 0.4575444527003296,
+    "2": 0.12085095990998952,
+    "3": 0.12694547089841213
+   },
+   "confidence": 0.4575444527003296
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.2686818079442844
+  }
+ },
+ "10": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1497044683608379
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12001182889769182
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.7840560233970593,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.38825600049820763,
+    "1": 0.492993955870702,
+    "2": 0.06518806336691411,
+    "3": 0.053561980264176336
+   },
+   "confidence": 0.492993955870702
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.16380715758946113
+  }
+ },
+ "11": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15074122136002602
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.11752202833127778
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8007683056938949,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.39554756173969696,
+    "1": 0.4716577008836783,
+    "2": 0.06927360731965784,
+    "3": 0.06352113005696697
+   },
+   "confidence": 0.4716577008836783
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.17036588028139416
+  }
+ },
+ "12": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.18291262131104008
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.13647341085610007
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8867611491685261,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.39172182649662607,
+    "1": 0.4235490518125285,
+    "2": 0.09097526771653877,
+    "3": 0.09375385397430669
+   },
+   "confidence": 0.4235490518125285
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.18743344735788575
+  }
+ },
+ "13": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.16715493193552897
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12612943305531393
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9278280598177807,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.35723929542012806,
+    "1": 0.44099326079075496,
+    "2": 0.11846753234032514,
+    "3": 0.08329991144879183
+   },
+   "confidence": 0.44099326079075496
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.2176161848547462
+  }
+ },
+ "14": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1808361024427499
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12549920299665376
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9789921957319199,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.30617660513269307,
+    "1": 0.4960758854707954,
+    "2": 0.11032621792841012,
+    "3": 0.08742129146810142
+   },
+   "confidence": 0.4960758854707954
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.1426824733033854
+  }
+ },
+ "15": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1732829460140918
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12922024913329064
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9377423059387808,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.30403572504527926,
+    "1": 0.5258847737609543,
+    "2": 0.09838097140347284,
+    "3": 0.0716985297902936
+   },
+   "confidence": 0.5258847737609543
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.2527261848045376
+  }
+ },
+ "16": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.2102891235718435
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.14085432666820075
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9127195282749605,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.3375027433047463,
+    "1": 0.4932235146122277,
+    "2": 0.08832521258634501,
+    "3": 0.08094852949668095
+   },
+   "confidence": 0.4932235146122277
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.3483900574750962
+  }
+ },
+ "17": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.2529167853292021
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.15468239001025216
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.0495583962275747,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.2763531069737288,
+    "1": 0.5066268492795543,
+    "2": 0.10812858429213043,
+    "3": 0.10889145945458653
+   },
+   "confidence": 0.5066268492795543
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.4739879581687491
+  }
+ },
+ "18": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1761733159278339
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.13798887077356048
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9162081436587504,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.35355187276167366,
+    "1": 0.4655744720596688,
+    "2": 0.0919872939368913,
+    "3": 0.08888636124176631
+   },
+   "confidence": 0.4655744720596688
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.2727289779581693
+  }
+ },
+ "19": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.17654131107948695
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.14270341459358987
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.1917673970182006,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.20945791710264117,
+    "1": 0.4996525001009767,
+    "2": 0.18055385147192213,
+    "3": 0.11033573132445987
+   },
+   "confidence": 0.4996525001009767
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.31816925317737405
+  }
+ },
+ "20": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.315998733135788
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.15510252776132238
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.0820515566776205,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.2621137999056437,
+    "1": 0.508059322965068,
+    "2": 0.11548839767531256,
+    "3": 0.11433847945397582
+   },
+   "confidence": 0.508059322965068
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.36081889524230437
+  }
+ },
+ "21": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15527225701844471
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.11660605377116298
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9508681670248605,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.31714200916693064,
+    "1": 0.4934594267371023,
+    "2": 0.11078695200014313,
+    "3": 0.078611612095824
+   },
+   "confidence": 0.4934594267371023
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.14552365300657297
+  }
+ },
+ "22": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.16474513412451383
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1251378749870123
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9439126083413516,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.309761476429369,
+    "1": 0.5097140704288049,
+    "2": 0.1073748215129316,
+    "3": 0.07314963162889448
+   },
+   "confidence": 0.5097140704288049
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.17360314248954944
+  }
+ },
+ "23": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15513827395961305
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1193892890743329
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8096692203681076,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.393561437187175,
+    "1": 0.4660294262620991,
+    "2": 0.07758761554616936,
+    "3": 0.06282152100455661
+   },
+   "confidence": 0.4660294262620991
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.15635437920893544
+  }
+ },
+ "24": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.18378202542127195
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.13391327269477593
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8174144182540666,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.4043331309566293,
+    "1": 0.44726817841680383,
+    "2": 0.07504983204243794,
+    "3": 0.07334885858412894
+   },
+   "confidence": 0.44726817841680383
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.2680522726528063
+  }
+ },
+ "25": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1650824084045465
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1304234238779724
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8589273882502764,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.380986105581741,
+    "1": 0.45720403354757133,
+    "2": 0.08370622790935824,
+    "3": 0.07810363296132954
+   },
+   "confidence": 0.45720403354757133
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.24190591260808667
+  }
+ },
+ "26": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.14516310747401742
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.11510189413413424
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8299397333689185,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.3790138928261221,
+    "1": 0.47807438184754986,
+    "2": 0.0768698244576159,
+    "3": 0.06604190086871228
+   },
+   "confidence": 0.47807438184754986
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.1988192293611025
+  }
+ },
+ "27": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.18169932028913
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.14413620560708618
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9189776968476326,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.3529811224386806,
+    "1": 0.4565691774164515,
+    "2": 0.1089405810034226,
+    "3": 0.08150911914144532
+   },
+   "confidence": 0.4565691774164515
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.3135877638762905
+  }
+ },
+ "28": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.14673830223124348
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12283699408622692
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.968213832909919,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.33778226831266367,
+    "1": 0.4411731692794039,
+    "2": 0.13609302359328218,
+    "3": 0.08495153881465026
+   },
+   "confidence": 0.4411731692794039
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.2956638719589526
+  }
+ },
+ "29": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.14768964377293756
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.11166104865123878
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.7873491252260936,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.4053388465429049,
+    "1": 0.4622473413690362,
+    "2": 0.07213965240711932,
+    "3": 0.06027415968093956
+   },
+   "confidence": 0.4622473413690362
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.19378971738974415
+  }
+ },
+ "30": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.16291964576628473
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.126906589287638
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9686055453908416,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.3039212256539868,
+    "1": 0.49858408038291896,
+    "2": 0.12246261688135963,
+    "3": 0.07503207708173447
+   },
+   "confidence": 0.49858408038291896
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.2977729680647857
+  }
+ },
+ "31": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1594370520706956
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12291104937971305
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.0194676855221196,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.2946231414751022,
+    "1": 0.4719493969954081,
+    "2": 0.15276409606175773,
+    "3": 0.08066336546773202
+   },
+   "confidence": 0.4719493969954081
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.3201674959084048
+  }
+ },
+ "32": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1406524831532313
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.10707695629889544
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.7433585163546097,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.4407458845008676,
+    "1": 0.4326982638798392,
+    "2": 0.06900730238310947,
+    "3": 0.05754854923618387
+   },
+   "confidence": 0.4407458845008676
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.22565548846203495
+  }
+ },
+ "33": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1525640693305324
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.11026786270012551
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.7535787302331578,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.43858070025491463,
+    "1": 0.4337713055604906,
+    "2": 0.06313655788111676,
+    "3": 0.0645114363034779
+   },
+   "confidence": 0.43858070025491463
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.174597732006873
+  }
+ },
+ "34": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.13441051349630703
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.10352515160474088
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.7050035273178151,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.4592404287337588,
+    "1": 0.4300518473787494,
+    "2": 0.057171491723409615,
+    "3": 0.053536232164082154
+   },
+   "confidence": 0.4592404287337588
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.14274775558252026
+  }
+ },
+ "35": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1411976116177645
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.10638843569879936
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.7146836960553378,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.45368517063371366,
+    "1": 0.43418867257569443,
+    "2": 0.055883446892132246,
+    "3": 0.05624270989845961
+   },
+   "confidence": 0.45368517063371366
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.20388734676136105
+  }
+ },
+ "36": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.19661928927954747
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.14010227968771696
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9557968697732026,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.3353594486839373,
+    "1": 0.464491064583953,
+    "2": 0.1091426550070793,
+    "3": 0.09100683172503031
+   },
+   "confidence": 0.464491064583953
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.3220518914659994
+  }
+ },
+ "37": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1623309467046365
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.13020596182041708
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8530450300940137,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.35616125291990497,
+    "1": 0.4959520662517618,
+    "2": 0.08656707864274789,
+    "3": 0.061319602185585353
+   },
+   "confidence": 0.4959520662517618
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.2894113131370772
+  }
+ },
+ "38": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15953657611258898
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1322949572354758
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8116837033975172,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.42858041662450463,
+    "1": 0.4034600312532519,
+    "2": 0.09565498422246528,
+    "3": 0.07230456789977822
+   },
+   "confidence": 0.42858041662450463
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.28332087356079144
+  }
+ },
+ "39": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1537747749016514
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12177379612869939
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.7776840298910856,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.44919902502297604,
+    "1": 0.39252614740949954,
+    "2": 0.08966660022098719,
+    "3": 0.06860822734653724
+   },
+   "confidence": 0.44919902502297604
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.2610810026310272
+  }
+ },
+ "40": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.14242631050916962
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12660173251909104
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8387788729737733,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.3988287655049101,
+    "1": 0.4358049539793289,
+    "2": 0.09312492255283833,
+    "3": 0.0722413579629226
+   },
+   "confidence": 0.4358049539793289
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.2964369100373319
+  }
+ },
+ "41": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15357303492785315
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1280116886770087
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.7385163968672599,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.47213027409770514,
+    "1": 0.3824583531579781,
+    "2": 0.08017607452366841,
+    "3": 0.06523529822064833
+   },
+   "confidence": 0.47213027409770514
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.3385053655113304
+  }
+ },
+ "42": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15803256022671427
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.13676582946954444
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8063283274884355,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.43470060695667695,
+    "1": 0.3964442620617436,
+    "2": 0.09668132751804605,
+    "3": 0.07217380346353328
+   },
+   "confidence": 0.43470060695667695
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.22875122981401405
+  }
+ },
+ "43": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1752742665662621
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.172080184222361
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8547893151958444,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.38531952097911626,
+    "1": 0.45881181519352154,
+    "2": 0.07162849147976377,
+    "3": 0.08424017234759845
+   },
+   "confidence": 0.45881181519352154
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.33599650028539424
+  }
+ },
+ "44": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.18904860979811092
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.16166510520602062
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.0156622879184038,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.277819516522389,
+    "1": 0.531350594313934,
+    "2": 0.08817797388656078,
+    "3": 0.10265191527711612
+   },
+   "confidence": 0.531350594313934
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.3821173498017102
+  }
+ },
+ "45": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1565327792677735
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.13176283230711167
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8016704415747012,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.3945562880797617,
+    "1": 0.4742522798594501,
+    "2": 0.06615613446711373,
+    "3": 0.06503529759367455
+   },
+   "confidence": 0.4742522798594501
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.2787189908444932
+  }
+ },
+ "46": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1678573727616441
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.15673630079072337
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9345827663434841,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.31408003800649104,
+    "1": 0.519509996387474,
+    "2": 0.08415712686209477,
+    "3": 0.08225283874394022
+   },
+   "confidence": 0.519509996387474
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.3265969757859097
+  }
+ },
+ "47": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.2085076767665296
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.14248386270084304
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9363279919283145,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.30337474781702045,
+    "1": 0.5338440926087732,
+    "2": 0.0858595794030779,
+    "3": 0.0769215801711285
+   },
+   "confidence": 0.5338440926087732
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.4110893972514349
+  }
+ },
+ "48": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15017049739956925
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12689723793219684
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8961724895796492,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.31656340198824484,
+    "1": 0.5399694135590813,
+    "2": 0.0741984773374533,
+    "3": 0.06926870711522043
+   },
+   "confidence": 0.5399694135590813
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.19467383141900896
+  }
+ },
+ "49": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.16849788904924873
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.13458719574104358
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.7960551845409851,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.3964022961995255,
+    "1": 0.47384405616634256,
+    "2": 0.06704981452775313,
+    "3": 0.06270383310637878
+   },
+   "confidence": 0.47384405616634256
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.21046449766898118
+  }
+ },
+ "50": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1473670116586203
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12895826436155905
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.7492387170885023,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.41974615966745116,
+    "1": 0.4671520480221307,
+    "2": 0.057218707864882694,
+    "3": 0.05588308444553541
+   },
+   "confidence": 0.4671520480221307
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.19598149867327017
+  }
+ },
+ "51": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1830867170976604
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.14542910610054666
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.903413283285101,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.33042837443659473,
+    "1": 0.514779821626728,
+    "2": 0.07574195015165908,
+    "3": 0.07904985378501828
+   },
+   "confidence": 0.514779821626728
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.3746185310783495
+  }
+ },
+ "52": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.23122764911628552
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1524247321233681
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9927864764815113,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.2805173999044429,
+    "1": 0.5364700786442009,
+    "2": 0.0927211665167583,
+    "3": 0.09029135493459792
+   },
+   "confidence": 0.5364700786442009
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.40539563163089626
+  }
+ },
+ "53": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.23711631340180828
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1498140006446218
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.0374569665666624,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.2289588657616639,
+    "1": 0.597552653612249,
+    "2": 0.0805611289238478,
+    "3": 0.09292735170223929
+   },
+   "confidence": 0.597552653612249
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.4890803774823186
+  }
+ },
+ "54": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.22881012304370146
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1534106470819024
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.0017393007814666,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.25944804926948833,
+    "1": 0.5671153662271592,
+    "2": 0.08568581895575028,
+    "3": 0.08775076554760225
+   },
+   "confidence": 0.5671153662271592
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.38242362236811034
+  }
+ },
+ "55": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.18890463789088088
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1381710390235988
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.932990328673137,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.2897011135611802,
+    "1": 0.5581667319714119,
+    "2": 0.08157286670049828,
+    "3": 0.07055928776690952
+   },
+   "confidence": 0.5581667319714119
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.29873245500921286
+  }
+ },
+ "56": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.2247434425845291
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.16973261404850587
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9336729526859076,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.3395395663892092,
+    "1": 0.47576143096186413,
+    "2": 0.09618548622273684,
+    "3": 0.0885135164261899
+   },
+   "confidence": 0.47576143096186413
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.3243658014930006
+  }
+ },
+ "57": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.24216677211042165
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.18193950558398161
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.1862655868301126,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.2260716191702194,
+    "1": 0.4991911028349698,
+    "2": 0.13713734998928978,
+    "3": 0.1375999280055211
+   },
+   "confidence": 0.4991911028349698
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.46818341203671365
+  }
+ },
+ "58": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.24529707641951384
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.16764980022070625
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9720728508715714,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.3192904918300704,
+    "1": 0.48438607760751995,
+    "2": 0.1012835184231775,
+    "3": 0.09503991213923213
+   },
+   "confidence": 0.48438607760751995
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.2661545697971014
+  }
+ },
+ "59": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15888473804965494
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.13433691215005303
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9242503519956762,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.30186070943787563,
+    "1": 0.547061178244845,
+    "2": 0.07604516320100693,
+    "3": 0.07503294911627244
+   },
+   "confidence": 0.547061178244845
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.23702911952953157
+  }
+ },
+ "60": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15383739369091426
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.1315372649282749
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8767820938922438,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.3335639681335824,
+    "1": 0.523348153920342,
+    "2": 0.07582969386632522,
+    "3": 0.06725818407975048
+   },
+   "confidence": 0.523348153920342
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.22500991287145028
+  }
+ },
+ "61": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.16395338382274477
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.13149080762152857
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9304259170472606,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.337502845662914,
+    "1": 0.4773506065886136,
+    "2": 0.10236433278677033,
+    "3": 0.0827822149617021
+   },
+   "confidence": 0.4773506065886136
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.33666513085593813
+  }
+ },
+ "62": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1606337000884104
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.14274653021672992
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8303170338143556,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.4215036599480384,
+    "1": 0.4005793157814788,
+    "2": 0.10401335477857135,
+    "3": 0.07390366949191138
+   },
+   "confidence": 0.4215036599480384
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.3804816238126408
+  }
+ },
+ "63": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1451953586944798
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.13118941900617037
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8472988837149475,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.37336519317287037,
+    "1": 0.47483226563921277,
+    "2": 0.08294100548801574,
+    "3": 0.06886153569990111
+   },
+   "confidence": 0.47483226563921277
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.27581009485198943
+  }
+ },
+ "64": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15998835750054516
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12522931168900195
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.8642574785205192,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.3807872900465245,
+    "1": 0.45406076380100224,
+    "2": 0.08525912373790263,
+    "3": 0.07989282241457056
+   },
+   "confidence": 0.45406076380100224
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.3114039559759096
+  }
+ },
+ "65": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.17563408719213086
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12418894159727556
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9545165757281875,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.3005674625748363,
+    "1": 0.5276808819568645,
+    "2": 0.08841927263357444,
+    "3": 0.08333238283472472
+   },
+   "confidence": 0.5276808819568645
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.2856621226772833
+  }
+ },
+ "66": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15380356826558073
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12371950874008183
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9536571488062588,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.29519742219108497,
+    "1": 0.5363999401871696,
+    "2": 0.0879507042461471,
+    "3": 0.08045193337559832
+   },
+   "confidence": 0.5363999401871696
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.2900852720186322
+  }
+ },
+ "67": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.15400636361771147
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12252162330053189
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 0.9539159434153909,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.32395140753394963,
+    "1": 0.47735626127252706,
+    "2": 0.11951731143770597,
+    "3": 0.07917501975581728
+   },
+   "confidence": 0.47735626127252706
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.3830872701944534
+  }
+ },
+ "68": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1779139951938204
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12618946579549387
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.071260769402904,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.26945888117988626,
+    "1": 0.4784916908613313,
+    "2": 0.16337920533477499,
+    "3": 0.08867022262400755
+   },
+   "confidence": 0.4784916908613313
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.466870163238215
+  }
+ },
+ "69": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.18972076051484624
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.11982769004012828
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.6093364805459276,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.12170935966815118,
+    "1": 0.27470938550565144,
+    "2": 0.4761166694383162,
+    "3": 0.12746458538788122
+   },
+   "confidence": 0.4761166694383162
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.5722945954795392
+  }
+ },
+ "70": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.1882463650480577
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.12502369869347912
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.2345963952037124,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.22063458586436888,
+    "1": 0.4279385654714154,
+    "2": 0.24762271626034996,
+    "3": 0.1038041324038657
+   },
+   "confidence": 0.4279385654714154
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.7445563211568726
+  }
+ },
+ "71": {
+  "worth": {
+   "type": "noul",
+   "noul": 0.17439531086623444
+  },
+  "candy_in_cup": {
+   "type": "noul",
+   "noul": 0.14394942538102362
+  },
+  "release_moment": {
+   "type": "score",
+   "score": 1.129111654112426,
+   "legend": {
+    "0": "No candy is being released; the gripper is closed or empty.",
+    "1": "The gripper is open but no candy is visible moving away from it.",
+    "2": "A candy is visible just leaving the gripper, close to the release point.",
+    "3": "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   },
+   "probabilities": {
+    "0": 0.25672978856710055,
+    "1": 0.4658597423259782,
+    "2": 0.16897949553431615,
+    "3": 0.10843097357260517
+   },
+   "confidence": 0.4658597423259782
+  },
+  "cup_target": {
+   "type": "noul",
+   "noul": 0.4799993721156197
+  }
+ }
+}

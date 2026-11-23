@@ -1,0 +1,95 @@
+{
+ "writer": "Qwen/Qwen3.8-27B-FP8@c3a462cc (transformers FP8, 생각 끔, 검색 없음)",
+ "request": "마크 영상인데 다이아 캐거나 크리퍼 만나거나 위험한 장면 뽑아줘",
+ "facts": [
+  "길이 5:00",
+  "화면 640×360"
+ ],
+ "feedback": [],
+ "understanding": "마인크래프트 영상에서 다이아를 캐거나 크리퍼가 나타나 위험한 상황이 되는 장면을 찾아주세요.",
+ "kind": "동작·상태 변화와 작은 단서의 혼합입니다. 다이아 채굴은 손과 블록의 상호작용(변화)이 필요하고, 크리퍼는 화면에 등장하는 대상(모습)이지만 위험한 상황은 거리나 폭발 전조(변화)를 봐야 알 수 있으므로 4장 묶음이 적합합니다.",
+ "limits": "다이아를 이미 캐고 인벤토리에 들고 있는 장면은 '채굴 중'이 아니므로 제외되며, 크리퍼가 멀리서 보일 때만으로는 '위험한 장면'으로 점수가 낮게 나올 수 있습니다.",
+ "viewer_request": "moments where the player mines diamond ore or encounters a creeper in a dangerous situation",
+ "questions": {
+  "mining_diamond": {
+   "type": "noul",
+   "instructions": "Do these `frames` show the player actively mining a diamond ore block?",
+   "criteria": {
+    "true": "The player's hand is swinging or interacting with a block that has distinct light blue speckles on a grey stone background (diamond ore). The block is being broken or the player is focused on it.",
+    "false": "Mining other ores (iron, coal, gold, redstone), mining stone without visible diamond speckles, holding diamond items but not mining, or looking at a diamond block in an inventory."
+   }
+  },
+  "creeper_close": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a creeper appearing in the player's immediate vicinity or attacking?",
+   "criteria": {
+    "true": "A green, four-legged creature with a face (creeper) is visible in the frame, positioned close to the player's viewpoint or character, or the player is looking directly at it.",
+    "false": "Creeper skins on other players, zombie villagers, skeletons, or any other mob. A creeper that is very far away and not interacting with the player's current position."
+   }
+  },
+  "danger_level": {
+   "type": "score",
+   "instructions": "How dangerous is the immediate situation shown in these `frames` for the player?",
+   "criteria": [
+    "No visible threat. The player is in a safe area, exploring, or crafting.",
+    "Mild threat. A hostile mob is visible but at a safe distance, or the player is in a dark area without immediate danger.",
+    "Moderate threat. A hostile mob is approaching, or the player is in a combat stance with a mob nearby.",
+    "High threat. A creeper is very close (about to explode), or the player is being attacked by multiple mobs, or health is visibly low."
+   ]
+  }
+ },
+ "check": {
+  "target": {
+   "key": "diamond_or_creeper_threat",
+   "ko": "다이아 채굴 또는 크리퍼 위협",
+   "is": "Player is breaking a diamond ore block OR a creeper is close to the player/attacking."
+  },
+  "confusers": [
+   {
+    "key": "mining_other_ore",
+    "ko": "다른 광물 채굴",
+    "is": "Player is mining iron, coal, or stone, but no diamond speckles are visible on the block."
+   },
+   {
+    "key": "creeper_far_away",
+    "ko": "먼 곳의 크리퍼",
+    "is": "A creeper is visible in the distance but not interacting with the player or posing an immediate threat."
+   }
+  ],
+  "noul": {
+   "instructions": "Do these frames show the player mining diamond ore or a creeper posing an immediate threat?",
+   "criteria": {
+    "true": "The player is actively breaking a diamond ore block, or a creeper is close to the player (within a few blocks) or attacking.",
+    "false": "Mining other ores, no creeper visible, or creeper is far away and not a threat."
+   }
+  }
+ },
+ "raw_reply": "{\n \"understanding\": \"마인크래프트 영상에서 다이아를 캐거나 크리퍼가 나타나 위험한 상황이 되는 장면을 찾아주세요.\",\n \"looked_up\": \"검색하지 않음\",\n \"kind\": \"동작·상태 변화와 작은 단서의 혼합입니다. 다이아 채굴은 손과 블록의 상호작용(변화)이 필요하고, 크리퍼는 화면에 등장하는 대상(모습)이지만 위험한 상황은 거리나 폭발 전조(변화)를 봐야 알 수 있으므로 4장 묶음이 적합합니다.\",\n \"viewer_request\": \"moments where the player mines diamond ore or encounters a creeper in a dangerous situation\",\n \"questions\": {\n  \"mining_diamond\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show the player actively mining a diamond ore block?\",\n   \"criteria\": {\n    \"true\": \"The player's hand is swinging or interacting with a block that has distinct light blue speckles on a grey stone background (diamond ore). The block is being broken or the player is focused on it.\",\n    \"false\": \"Mining other ores (iron, coal, gold, redstone), mining stone without visible diamond speckles, holding diamond items but not mining, or looking at a diamond block in an inventory.\"\n   }\n  },\n  \"creeper_close\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a creeper appearing in the player's immediate vicinity or attacking?\",\n   \"criteria\": {\n    \"true\": \"A green, four-legged creature with a face (creeper) is visible in the frame, positioned close to the player's viewpoint or character, or the player is looking directly at it.\",\n    \"false\": \"Creeper skins on other players, zombie villagers, skeletons, or any other mob. A creeper that is very far away and not interacting with the player's current position.\"\n   }\n  },\n  \"danger_level\": {\n   \"type\": \"score\",\n   \"instructions\": \"How dangerous is the immediate situation shown in these frames for the player?\",\n   \"criteria\": [\n    \"No visible threat. The player is in a safe area, exploring, or crafting.\",\n    \"Mild threat. A hostile mob is visible but at a safe distance, or the player is in a dark area without immediate danger.\",\n    \"Moderate threat. A hostile mob is approaching, or the player is in a combat stance with a mob nearby.\",\n    \"High threat. A creeper is very close (about to explode), or the player is being attacked by multiple mobs, or health is visibly low.\"\n   ]\n  }\n },\n \"limits\": \"다이아를 이미 캐고 인벤토리에 들고 있는 장면은 '채굴 중'이 아니므로 제외되며, 크리퍼가 멀리서 보일 때만으로는 '위험한 장면'으로 점수가 낮게 나올 수 있습니다.\",\n \"check\": {\n  \"target\": {\n   \"key\": \"diamond_or_creeper_threat\",\n   \"ko\": \"다이아 채굴 또는 크리퍼 위협\",\n   \"is\": \"Player is breaking a diamond ore block OR a creeper is close to the player/attacking.\"\n  },\n  \"confusers\": [\n   {\n    \"key\": \"mining_other_ore\",\n    \"ko\": \"다른 광물 채굴\",\n    \"is\": \"Player is mining iron, coal, or stone, but no diamond speckles are visible on the block.\"\n   },\n   {\n    \"key\": \"creeper_far_away\",\n    \"ko\": \"먼 곳의 크리퍼\",\n    \"is\": \"A creeper is visible in the distance but not interacting with the player or posing an immediate threat.\"\n   }\n  ],\n  \"noul\": {\n   \"instructions\": \"Do these frames show the player mining diamond ore or a creeper posing an immediate threat?\",\n   \"criteria\": {\n    \"true\": \"The player is actively breaking a diamond ore block, or a creeper is close to the player (within a few blocks) or attacking.\",\n    \"false\": \"Mining other ores, no creeper visible, or creeper is far away and not a threat.\"\n   }\n  }\n }\n}",
+ "writer_calls": [
+  {
+   "wall_seconds": 107.7,
+   "prompt_tokens": 8347,
+   "new_tokens": 773,
+   "stop": "time",
+   "gen_seconds": 102.35,
+   "seconds": 102.41,
+   "first_token_seconds": 7.74,
+   "decode_tok_s": 8.16,
+   "room": 102.1,
+   "peak_gb": 43.6
+  },
+  {
+   "wall_seconds": 31.7,
+   "prompt_tokens": 9120,
+   "new_tokens": 179,
+   "stop": "eos",
+   "gen_seconds": 31.49,
+   "seconds": 31.52,
+   "first_token_seconds": 7.46,
+   "decode_tok_s": 7.41,
+   "room": 98.1,
+   "peak_gb": 44.0
+  }
+ ],
+ "format_retries": 0
+}

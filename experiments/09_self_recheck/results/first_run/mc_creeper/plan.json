@@ -1,0 +1,95 @@
+{
+ "writer": "Qwen/Qwen3.8-27B-FP8@c3a462cc (transformers FP8, 생각 끔, 검색 없음)",
+ "request": "마크 영상인데 크리퍼 나오는 장면 찾아줘",
+ "facts": [
+  "길이 5:00",
+  "화면 640×360"
+ ],
+ "feedback": [],
+ "understanding": "마인크래프트 영상에서 크리퍼가 화면에 등장하는 장면을 찾는 것입니다.",
+ "kind": "모습: 한 장으로 보이는 대상(크리퍼)을 찾는 것이므로 4장 묶음 중 어느 한 장에 보이면 되는 기준입니다.",
+ "limits": "크리퍼가 화면 가장자리에 아주 작게 있거나 다른 물체에 가려져 있을 경우 놓칠 수 있습니다.",
+ "viewer_request": "scenes where a creeper appears",
+ "questions": {
+  "creeper_present": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a Creeper?",
+   "criteria": {
+    "true": "A green, pixelated, four-legged mob with a face (two black eyes and a frowning mouth) is visible in the scene.",
+    "false": "No Creeper is visible. Other mobs (zombies, skeletons, endermen), players, or green blocks do not count."
+   }
+  },
+  "creeper_clarity": {
+   "type": "score",
+   "instructions": "How clearly is a Creeper visible in these `frames`?",
+   "criteria": [
+    "No Creeper is visible in any of the frames.",
+    "A Creeper is barely visible, very small, or mostly obscured by blocks or other mobs.",
+    "A Creeper is clearly visible in the scene, taking up a moderate portion of the screen.",
+    "A Creeper is prominently visible, large in the frame, or the main focus of the view."
+   ]
+  },
+  "creeper_focus": {
+   "type": "noul",
+   "instructions": "Is a Creeper the main subject of the view in these `frames`?",
+   "criteria": {
+    "true": "The camera is pointed at a Creeper, or the Creeper occupies a significant central portion of the screen.",
+    "false": "The Creeper is in the background, corner, or not the primary focus of the player's view."
+   }
+  }
+ },
+ "check": {
+  "target": {
+   "key": "creeper_visible",
+   "ko": "크리퍼가 보임",
+   "is": "A green, pixelated, four-legged mob with a distinctive face is clearly visible in the scene."
+  },
+  "confusers": [
+   {
+    "key": "zombie",
+    "ko": "좀비",
+    "is": "A green, humanoid mob with tattered clothes and no legs visible (or standing upright) is present."
+   },
+   {
+    "key": "green_block",
+    "ko": "초록색 블록",
+    "is": "Green blocks (like slime or moss) are visible, but no mob with a face is present."
+   }
+  ],
+  "noul": {
+   "instructions": "Do these frames show a Creeper?",
+   "criteria": {
+    "true": "A green, pixelated, four-legged mob with a face (two black eyes and a frowning mouth) is visible.",
+    "false": "No Creeper is visible. Zombies, skeletons, endermen, players, or green blocks do not count."
+   }
+  }
+ },
+ "raw_reply": "{\n \"understanding\": \"마인크래프트 영상에서 크리퍼가 화면에 등장하는 장면을 찾는 것입니다.\",\n \"looked_up\": \"검색하지 않음\",\n \"kind\": \"모습: 한 장으로 보이는 대상(크리퍼)을 찾는 것이므로 4장 묶음 중 어느 한 장에 보이면 되는 기준입니다.\",\n \"viewer_request\": \"scenes where a creeper appears\",\n \"questions\": {\n  \"creeper_present\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a Creeper?\",\n   \"criteria\": {\n    \"true\": \"A green, pixelated, four-legged mob with a face (two black eyes and a frowning mouth) is visible in the scene.\",\n    \"false\": \"No Creeper is visible. Other mobs (zombies, skeletons, endermen), players, or green blocks do not count.\"\n   }\n  },\n  \"creeper_clarity\": {\n   \"type\": \"score\",\n   \"instructions\": \"How clearly is a Creeper visible in these frames?\",\n   \"criteria\": [\n    \"No Creeper is visible in any of the frames.\",\n    \"A Creeper is barely visible, very small, or mostly obscured by blocks or other mobs.\",\n    \"A Creeper is clearly visible in the scene, taking up a moderate portion of the screen.\",\n    \"A Creeper is prominently visible, large in the frame, or the main focus of the view.\"\n   ]\n  },\n  \"creeper_focus\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Is a Creeper the main subject of the view in these frames?\",\n   \"criteria\": {\n    \"true\": \"The camera is pointed at a Creeper, or the Creeper occupies a significant central portion of the screen.\",\n    \"false\": \"The Creeper is in the background, corner, or not the primary focus of the player's view.\"\n   }\n  }\n },\n \"limits\": \"크리퍼가 화면 가장자리에 아주 작게 있거나 다른 물체에 가려져 있을 경우 놓칠 수 있습니다.\",\n \"check\": {\n  \"target\": {\n   \"key\": \"creeper_visible\",\n   \"ko\": \"크리퍼가 보임\",\n   \"is\": \"A green, pixelated, four-legged mob with a distinctive face is clearly visible in the scene.\"\n  },\n  \"confusers\": [\n   {\n    \"key\": \"zombie\",\n    \"ko\": \"좀비\",\n    \"is\": \"A green, humanoid mob with tattered clothes and no legs visible (or standing upright) is present.\"\n   },\n   {\n    \"key\": \"green_block\",\n    \"ko\": \"초록색 블록\",\n    \"is\": \"Green blocks (like slime or moss) are visible, but no mob with a face is present.\"\n   }\n  ],\n  \"noul\": {\n   \"instructions\": \"Do these frames show a Creeper?\",\n   \"criteria\": {\n    \"true\": \"A green, pixelated, four-legged mob with a face (two black eyes and a frowning mouth) is visible.\",\n    \"false\": \"No Creeper is visible. Zombies, skeletons, endermen, players, or green blocks do not count.\"\n   }\n  }\n }\n}",
+ "writer_calls": [
+  {
+   "wall_seconds": 89.1,
+   "prompt_tokens": 8339,
+   "new_tokens": 641,
+   "stop": "eos",
+   "gen_seconds": 84.09,
+   "seconds": 84.15,
+   "first_token_seconds": 7.72,
+   "decode_tok_s": 8.38,
+   "room": 103.7,
+   "peak_gb": 43.6
+  },
+  {
+   "wall_seconds": 98.0,
+   "prompt_tokens": 9033,
+   "new_tokens": 746,
+   "stop": "eos",
+   "gen_seconds": 97.83,
+   "seconds": 97.85,
+   "first_token_seconds": 6.98,
+   "decode_tok_s": 8.2,
+   "room": 103.7,
+   "peak_gb": 43.9
+  }
+ ],
+ "format_retries": 1
+}

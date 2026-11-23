@@ -1,0 +1,105 @@
+{
+ "writer": "Qwen/Qwen3.8-27B-FP8@c3a462cc (transformers FP8, 생각 끔, 검색 없음)",
+ "request": "마크 영상인데 다이아 캐는 장면 찾아줘",
+ "facts": [
+  "길이 5:00",
+  "화면 640×360"
+ ],
+ "feedback": [],
+ "understanding": "마인크래프트 영상에서 다이아몬드(다이아)를 채굴하는 장면을 찾는 것입니다.",
+ "kind": "동작·상태 변화: 블록을 깨고 아이템이 나오는 과정을 봐야 하므로 4장 묶음이 적합합니다.",
+ "limits": "다이아몬드가 실제로 나오지 않고 단순히 돌을 파는 장면은 depth_context 점수로만 구분되며, 다이아몬드 아이템이 화면에 잠시만 보이면 놓칠 수 있습니다.",
+ "viewer_request": "scenes where the player mines diamonds",
+ "questions": {
+  "digging_stone": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a player actively mining a stone block?",
+   "criteria": {
+    "true": "The player's crosshair is on a stone block and the block shows increasing crack textures or the block is being removed.",
+    "false": "The player is mining dirt, gravel, coal, iron, or other non-stone blocks. The player is just looking at stone without mining. The block is already broken."
+   }
+  },
+  "diamond_drop": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a diamond item appearing or being collected?",
+   "criteria": {
+    "true": "A blue diamond item is visible falling from a block or in the player's inventory/hand.",
+    "false": "No diamond item is visible. Other items like coal, iron, gold, or lapis lazuli are visible. The player is just holding a diamond without it appearing from a block."
+   }
+  },
+  "depth_context": {
+   "type": "score",
+   "instructions": "Looking at `frames` together: How likely is the current location to be a deep cave or mine where diamonds spawn?",
+   "criteria": [
+    "Surface or shallow area (y > 100). No stone walls or ceiling.",
+    "Shallow cave or mine (y 60-100). Some stone, but mostly dirt or gravel.",
+    "Deep cave or mine (y 10-60). Surrounded by stone, typical diamond depth.",
+    "Very deep or bedrock level (y < 10). Near bedrock or very dark stone."
+   ]
+  }
+ },
+ "check": {
+  "target": {
+   "key": "diamond_mining",
+   "ko": "다이아몬드 채굴",
+   "is": "A blue diamond item is visible falling from a broken stone block or in the player's hand/inventory, indicating a successful diamond find."
+  },
+  "confusers": [
+   {
+    "key": "mining_stone",
+    "ko": "돌 채굴 (다이아 없음)",
+    "is": "The player is mining a stone block, but no diamond item appears. The block breaks into stone fragments or nothing."
+   },
+   {
+    "key": "mining_coal",
+    "ko": "석탄 채굴",
+    "is": "The player is mining a block, and a black coal item appears. Coal looks similar to diamond in low light but is black."
+   },
+   {
+    "key": "mining_iron",
+    "ko": "철 광석 채굴",
+    "is": "The player is mining a block, and a beige/brown iron ingot or ore item appears. Iron ore has a distinct beige color."
+   },
+   {
+    "key": "mining_lapis",
+    "ko": "라피스라줄리 채굴",
+    "is": "The player is mining a block, and a blue lapis lazuli item appears. Lapis is blue but has a different shape and color shade than diamond."
+   }
+  ],
+  "noul": {
+   "instructions": "Do these frames show a diamond item being mined or collected?",
+   "criteria": {
+    "true": "A blue diamond item is visible falling from a block or in the player's possession, distinct from coal, iron, or lapis lazuli.",
+    "false": "No diamond item is visible. The player is mining stone, dirt, or other blocks without obtaining a diamond. Other items like coal, iron, or lapis are visible."
+   }
+  }
+ },
+ "raw_reply": "{\n \"understanding\": \"마인크래프트 영상에서 다이아몬드(다이아)를 채굴하는 장면을 찾는 것입니다.\",\n \"looked_up\": \"검색하지 않음\",\n \"kind\": \"동작·상태 변화: 블록을 깨고 아이템이 나오는 과정을 봐야 하므로 4장 묶음이 적합합니다.\",\n \"questions\": {\n  \"digging_stone\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a player actively mining a stone block?\",\n   \"criteria\": {\n    \"true\": \"The player's crosshair is on a stone block and the block shows increasing crack textures or the block is being removed.\",\n    \"false\": \"The player is mining dirt, gravel, coal, iron, or other non-stone blocks. The player is just looking at stone without mining. The block is already broken.\"\n   }\n  },\n  \"diamond_drop\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a diamond item appearing or being collected?\",\n   \"criteria\": {\n    \"true\": \"A blue diamond item is visible falling from a block or in the player's inventory/hand.\",\n    \"false\": \"No diamond item is visible. Other items like coal, iron, gold, or lapis lazuli are visible. The player is just holding a diamond without it appearing from a block.\"\n   }\n  },\n  \"depth_context\": {\n   \"type\": \"score\",\n   \"instructions\": \"How likely is the current location to be a deep cave or mine where diamonds spawn?\",\n   \"criteria\": [\n    \"Surface or shallow area (y > 100). No stone walls or ceiling.\",\n    \"Shallow cave or mine (y 60-100). Some stone, but mostly dirt or gravel.\",\n    \"Deep cave or mine (y 10-60). Surrounded by stone, typical diamond depth.\",\n    \"Very deep or bedrock level (y < 10). Near bedrock or very dark stone.\"\n   ]\n  }\n },\n \"limits\": \"다이아몬드가 실제로 나오지 않고 단순히 돌을 파는 장면은 depth_context 점수로만 구분되며, 다이아몬드 아이템이 화면에 잠시만 보이면 놓칠 수 있습니다.\",\n \"viewer_request\": \"scenes where the player mines diamonds\",\n \"check\": {\n  \"target\": {\n   \"key\": \"diamond_mining\",\n   \"ko\": \"다이아몬드 채굴\",\n   \"is\": \"A blue diamond item is visible falling from a broken stone block or in the player's hand/inventory, indicating a successful diamond find.\"\n  },\n  \"confusers\": [\n   {\n    \"key\": \"mining_stone\",\n    \"ko\": \"돌 채굴 (다이아 없음)\",\n    \"is\": \"The player is mining a stone block, but no diamond item appears. The block breaks into stone fragments or nothing.\"\n   },\n   {\n    \"key\": \"mining_coal\",\n    \"ko\": \"석탄 채굴\",\n    \"is\": \"The player is mining a block, and a black coal item appears. Coal looks similar to diamond in low light but is black.\"\n   },\n   {\n    \"key\": \"mining_iron\",\n    \"ko\": \"철 광석 채굴\",\n    \"is\": \"The player is mining a block, and a beige/brown iron ingot or ore item appears. Iron ore has a distinct beige color.\"\n   },\n   {\n    \"key\": \"mining_lapis\",\n    \"ko\": \"라피스라줄리 채굴\",\n    \"is\": \"The player is mining a block, and a blue lapis lazuli item appears. Lapis is blue but has a different shape and color shade than diamond.\"\n   }\n  ],\n  \"noul\": {\n   \"instructions\": \"Do these frames show a diamond item being mined or collected?\",\n   \"criteria\": {\n    \"true\": \"A blue diamond item is visible falling from a block or in the player's possession, distinct from coal, iron, or lapis lazuli.\",\n    \"false\": \"No diamond item is visible. The player is mining stone, dirt, or other blocks without obtaining a diamond. Other items like coal, iron, or lapis are visible.\"\n   }\n  }\n }\n}",
+ "writer_calls": [
+  {
+   "wall_seconds": 92.8,
+   "prompt_tokens": 8553,
+   "new_tokens": 593,
+   "stop": "time",
+   "gen_seconds": 87.23,
+   "seconds": 87.33,
+   "first_token_seconds": 10.29,
+   "decode_tok_s": 7.69,
+   "room": 87.0,
+   "peak_gb": 43.7
+  },
+  {
+   "wall_seconds": 55.0,
+   "prompt_tokens": 9146,
+   "new_tokens": 370,
+   "stop": "eos",
+   "gen_seconds": 54.75,
+   "seconds": 54.78,
+   "first_token_seconds": 7.07,
+   "decode_tok_s": 7.74,
+   "room": 79.0,
+   "peak_gb": 44.0
+  }
+ ],
+ "format_retries": 0
+}

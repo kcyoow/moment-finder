@@ -1,0 +1,93 @@
+{
+ "writer": "Qwen/Qwen3.8-27B-FP8@c3a462cc (transformers FP8, 생각 끔, 검색 없음)",
+ "request": "마크 영상인데 다이아 캐거나 크리퍼 만나거나 위험한 장면 뽑아줘",
+ "facts": [
+  "길이 5:00",
+  "화면 640×360"
+ ],
+ "feedback": [],
+ "understanding": "마인크래프트 영상에서 다이아를 채굴하거나 크리퍼가 접근하는 위험한 순간을 찾는 요청입니다.",
+ "kind": "다이아 채굴은 결과(물건 획득)가 중요하여 한 장으로 보이는 모습과 4장의 변화가 모두 유효하며, 크리퍼는 대상의 존재와 접근이라는 동작 변화가 중요하여 4장 묶음이 적합합니다.",
+ "limits": "크리퍼가 화면 밖에서 폭발하거나, 다이아를 채굴했지만 아이템이 손에 들어오지 않고 바로 인벤토리에 들어가는 경우(화면 전환이 빠를 때) 놓칠 수 있습니다.",
+ "viewer_request": "moments where the player mines a diamond or encounters a creeper",
+ "questions": {
+  "diamond_mined": {
+   "type": "noul",
+   "instructions": "Do these `frames` show the player successfully mining a diamond ore block?",
+   "criteria": {
+    "true": "The player is interacting with a diamond ore block (blue speckled stone) and the block breaks, or a diamond item appears in the player's hand or inventory slot.",
+    "false": "The player is mining other ores (coal, iron, gold, redstone, lapis), stone, dirt, or other blocks. No diamond item is visible."
+   }
+  },
+  "creeper_present": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a creeper mob in the player's view?",
+   "criteria": {
+    "true": "A green, legless, faceless mob with a distinct face pattern (two black eyes and a frowning mouth) is visible in the scene.",
+    "false": "No creeper is visible. Other mobs like zombies, skeletons, spiders, or animals are present but no creeper."
+   }
+  },
+  "creeper_approach": {
+   "type": "score",
+   "instructions": "How close is the creeper to the player in these `frames`?",
+   "criteria": [
+    "No creeper is visible in the frames.",
+    "A creeper is visible in the background, far away from the player.",
+    "A creeper is visible in the mid-ground, at a moderate distance from the player.",
+    "A creeper is very close to the player, occupying a significant portion of the screen or immediately adjacent to the player character."
+   ]
+  }
+ },
+ "check": {
+  "target": {
+   "key": "danger_moment",
+   "ko": "다이아 채굴 성공 또는 크리퍼 근접",
+   "is": "Player holds a diamond item or breaks a diamond ore block, OR a green creeper mob is visible and close to the player."
+  },
+  "confusers": [
+   {
+    "key": "mining_other_ore",
+    "ko": "다른 광물 채굴",
+    "is": "Player is mining coal, iron, or stone blocks. The blocks are gray, brown, or have different colored speckles, not the bright blue of diamonds."
+   },
+   {
+    "key": "creeper_far",
+    "ko": "멀리 있는 크리퍼",
+    "is": "A creeper is visible in the distance, small in the frame, not posing an immediate threat or close to the player."
+   },
+   {
+    "key": "other_mob",
+    "ko": "다른 몬스터",
+    "is": "A zombie, skeleton, or spider is visible. These mobs have different body shapes and colors (zombies are green with clothes, skeletons are white/bone, spiders are black/red eyes) and are not creepers."
+   },
+   {
+    "key": "idle_survival",
+    "ko": "평범한 생존 장면",
+    "is": "The player is walking, building, or fighting a non-creeper mob without any diamond ore or creeper visible in the frame."
+   }
+  ],
+  "noul": {
+   "instructions": "Do these frames show a moment where the player mines a diamond or a creeper is close to the player?",
+   "criteria": {
+    "true": "The frames show a diamond item in the player's hand, a diamond ore block being broken, or a creeper mob that is close to the player (mid-ground or foreground).",
+    "false": "The frames show the player mining other blocks, fighting other mobs, or a creeper that is far away in the background. No diamond item or close creeper is present."
+   }
+  }
+ },
+ "raw_reply": "{\n \"understanding\": \"마인크래프트 영상에서 다이아를 채굴하거나 크리퍼가 접근하는 위험한 순간을 찾는 요청입니다.\",\n \"looked_up\": \"검색하지 않음\",\n \"kind\": \"다이아 채굴은 결과(물건 획득)가 중요하여 한 장으로 보이는 모습과 4장의 변화가 모두 유효하며, 크리퍼는 대상의 존재와 접근이라는 동작 변화가 중요하여 4장 묶음이 적합합니다.\",\n \"viewer_request\": \"moments where the player mines a diamond or encounters a creeper\",\n \"questions\": {\n  \"diamond_mined\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show the player successfully mining a diamond ore block?\",\n   \"criteria\": {\n    \"true\": \"The player is interacting with a diamond ore block (blue speckled stone) and the block breaks, or a diamond item appears in the player's hand or inventory slot.\",\n    \"false\": \"The player is mining other ores (coal, iron, gold, redstone, lapis), stone, dirt, or other blocks. No diamond item is visible.\"\n   }\n  },\n  \"creeper_present\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a creeper mob in the player's view?\",\n   \"criteria\": {\n    \"true\": \"A green, legless, faceless mob with a distinct face pattern (two black eyes and a frowning mouth) is visible in the scene.\",\n    \"false\": \"No creeper is visible. Other mobs like zombies, skeletons, spiders, or animals are present but no creeper.\"\n   }\n  },\n  \"creeper_approach\": {\n   \"type\": \"score\",\n   \"instructions\": \"How close is the creeper to the player in these frames?\",\n   \"criteria\": [\n    \"No creeper is visible in the frames.\",\n    \"A creeper is visible in the background, far away from the player.\",\n    \"A creeper is visible in the mid-ground, at a moderate distance from the player.\",\n    \"A creeper is very close to the player, occupying a significant portion of the screen or immediately adjacent to the player character.\"\n   ]\n  }\n },\n \"limits\": \"크리퍼가 화면 밖에서 폭발하거나, 다이아를 채굴했지만 아이템이 손에 들어오지 않고 바로 인벤토리에 들어가는 경우(화면 전환이 빠를 때) 놓칠 수 있습니다.\",\n \"check\": {\n  \"target\": {\n   \"key\": \"danger_moment\",\n   \"ko\": \"다이아 채굴 성공 또는 크리퍼 근접\",\n   \"is\": \"Player holds a diamond item or breaks a diamond ore block, OR a green creeper mob is visible and close to the player.\"\n  },\n  \"confusers\": [\n   {\n    \"key\": \"mining_other_ore\",\n    \"ko\": \"다른 광물 채굴\",\n    \"is\": \"Player is mining coal, iron, or stone blocks. The blocks are gray, brown, or have different colored speckles, not the bright blue of diamonds.\"\n   },\n   {\n    \"key\": \"creeper_far\",\n    \"ko\": \"멀리 있는 크리퍼\",\n    \"is\": \"A creeper is visible in the distance, small in the frame, not posing an immediate threat or close to the player.\"\n   },\n   {\n    \"key\": \"other_mob\",\n    \"ko\": \"다른 몬스터\",\n    \"is\": \"A zombie, skeleton, or spider is visible. These mobs have different body shapes and colors (zombies are green with clothes, skeletons are white/bone, spiders are black/red eyes) and are not creepers.\"\n   },\n   {\n    \"key\": \"idle_survival\",\n    \"ko\": \"평범한 생존 장면\",\n    \"is\": \"The player is walking, building, or fighting a non-creeper mob without any diamond ore or creeper visible in the frame.\"\n   }\n  ],\n  \"noul\": {\n   \"instructions\": \"Do these frames show a moment where the player mines a diamond or a creeper is close to the player?\",\n   \"criteria\": {\n    \"true\": \"The frames show a diamond item in the player's hand, a diamond ore block being broken, or a creeper mob that is close to the player (mid-ground or foreground).\",\n    \"false\": \"The frames show the player mining other blocks, fighting other mobs, or a creeper that is far away in the background. No diamond item or close creeper is present.\"\n   }\n  }\n }\n}",
+ "writer_calls": [
+  {
+   "wall_seconds": 86.3,
+   "prompt_tokens": 8561,
+   "new_tokens": 1043,
+   "stop": "eos",
+   "gen_seconds": 86.23,
+   "seconds": 86.26,
+   "first_token_seconds": 20.8,
+   "decode_tok_s": 15.93,
+   "room": 87.0,
+   "peak_gb": 43.5
+  }
+ ],
+ "format_retries": 0
+}

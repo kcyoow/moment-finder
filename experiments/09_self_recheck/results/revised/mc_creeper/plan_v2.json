@@ -1,0 +1,93 @@
+{
+ "writer": "Qwen/Qwen3.8-27B-FP8@c3a462cc (transformers FP8, 생각 끔, 검색 없음)",
+ "request": "마크 영상인데 크리퍼 나오는 장면 찾아줘",
+ "facts": [
+  "길이 5:00",
+  "화면 640×360"
+ ],
+ "feedback": [],
+ "understanding": "마인크래프트 영상에서 크리퍼가 화면에 등장하는 구간을 찾는 것입니다.",
+ "kind": "모습: 크리퍼의 외형(녹색, 무표정)은 한 장의 프레임에서도 명확히 식별 가능하므로, 4장 묶음으로 확인하되 단일 프레임에도 존재하면 참으로 판정합니다.",
+ "limits": "크리퍼가 매우 빠르게 지나가거나(1프레임 미만), 다른 객체(나무, 바위)에 완전히 가려져 있는 순간은 놓칠 수 있습니다. 또한 멀리서 보이는 작은 크리퍼는 '보이지 않음'으로 판정될 가능성이 있습니다.",
+ "viewer_request": "scenes where a creeper appears",
+ "questions": {
+  "creeper_visible": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a Creeper from Minecraft?",
+   "criteria": {
+    "true": "At least one frame contains a green, four-legged mob with a distinctive face (two black eyes and a frowning mouth) and no arms. It can be standing, moving, or exploding.",
+    "false": "No Creeper is visible. Other mobs (zombies, skeletons, spiders, endermen), players, or green blocks/items do not count."
+   }
+  },
+  "creeper_explosion": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a Creeper exploding or flashing white?",
+   "criteria": {
+    "true": "A Creeper is visible and its body is expanding, turning white, or emitting particles, indicating it is about to explode or is exploding.",
+    "false": "No Creeper is exploding. A Creeper standing still without flashing, or other explosions (like TNT) without a Creeper, do not count."
+   }
+  },
+  "creeper_closeup": {
+   "type": "score",
+   "instructions": "How prominent is the Creeper in these `frames`?",
+   "criteria": [
+    "No Creeper is visible in any frame.",
+    "A Creeper is visible but very small or far away in the background.",
+    "A Creeper is visible at medium distance, clearly identifiable but not dominating the screen.",
+    "A Creeper is close to the camera, taking up a significant portion of the frame."
+   ]
+  }
+ },
+ "check": {
+  "target": {
+   "key": "creeper_present",
+   "ko": "크리퍼 등장",
+   "is": "A green, four-legged mob with a black face (eyes and frown) is visible. It may be standing, walking, or flashing white before exploding."
+  },
+  "confusers": [
+   {
+    "key": "zombie",
+    "ko": "좀비",
+    "is": "A humanoid mob wearing teal shirt and purple pants, with green skin and arms hanging down. It has a face but is bipedal and wears clothes."
+   },
+   {
+    "key": "enderman",
+    "ko": "엔더맨",
+    "is": "A tall, thin, black mob with purple eyes and long limbs. It is bipedal and does not have a green body or a frowning face."
+   },
+   {
+    "key": "slime",
+    "ko": "슬라임",
+    "is": "A translucent, green, cube-shaped mob that bounces. It has a simple face but is not four-legged and does not have the distinct Creeper texture."
+   },
+   {
+    "key": "normal_gameplay",
+    "ko": "평범한 플레이",
+    "is": "The player is mining, building, or walking in a landscape without any hostile mobs like Creepers visible in the frame."
+   }
+  ],
+  "noul": {
+   "instructions": "Do these frames show a Creeper from Minecraft?",
+   "criteria": {
+    "true": "A green, four-legged mob with a black face (eyes and frown) is visible. It may be standing, walking, or flashing white.",
+    "false": "No Creeper is visible. Other mobs (zombies, skeletons, endermen, slimes), players, or green blocks do not count."
+   }
+  }
+ },
+ "raw_reply": "{\n \"understanding\": \"마인크래프트 영상에서 크리퍼가 화면에 등장하는 구간을 찾는 것입니다.\",\n \"looked_up\": \"검색하지 않음\",\n \"kind\": \"모습: 크리퍼의 외형(녹색, 무표정)은 한 장의 프레임에서도 명확히 식별 가능하므로, 4장 묶음으로 확인하되 단일 프레임에도 존재하면 참으로 판정합니다.\",\n \"questions\": {\n  \"creeper_visible\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a Creeper from Minecraft?\",\n   \"criteria\": {\n    \"true\": \"At least one frame contains a green, four-legged mob with a distinctive face (two black eyes and a frowning mouth) and no arms. It can be standing, moving, or exploding.\",\n    \"false\": \"No Creeper is visible. Other mobs (zombies, skeletons, spiders, endermen), players, or green blocks/items do not count.\"\n   }\n  },\n  \"creeper_explosion\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a Creeper exploding or flashing white?\",\n   \"criteria\": {\n    \"true\": \"A Creeper is visible and its body is expanding, turning white, or emitting particles, indicating it is about to explode or is exploding.\",\n    \"false\": \"No Creeper is exploding. A Creeper standing still without flashing, or other explosions (like TNT) without a Creeper, do not count.\"\n   }\n  },\n  \"creeper_closeup\": {\n   \"type\": \"score\",\n   \"instructions\": \"How prominent is the Creeper in these frames?\",\n   \"criteria\": [\n    \"No Creeper is visible in any frame.\",\n    \"A Creeper is visible but very small or far away in the background.\",\n    \"A Creeper is visible at medium distance, clearly identifiable but not dominating the screen.\",\n    \"A Creeper is close to the camera, taking up a significant portion of the frame.\"\n   ]\n  }\n },\n \"limits\": \"크리퍼가 매우 빠르게 지나가거나(1프레임 미만), 다른 객체(나무, 바위)에 완전히 가려져 있는 순간은 놓칠 수 있습니다. 또한 멀리서 보이는 작은 크리퍼는 '보이지 않음'으로 판정될 가능성이 있습니다.\",\n \"viewer_request\": \"scenes where a creeper appears\",\n \"check\": {\n  \"target\": {\n   \"key\": \"creeper_present\",\n   \"ko\": \"크리퍼 등장\",\n   \"is\": \"A green, four-legged mob with a black face (eyes and frown) is visible. It may be standing, walking, or flashing white before exploding.\"\n  },\n  \"confusers\": [\n   {\n    \"key\": \"zombie\",\n    \"ko\": \"좀비\",\n    \"is\": \"A humanoid mob wearing teal shirt and purple pants, with green skin and arms hanging down. It has a face but is bipedal and wears clothes.\"\n   },\n   {\n    \"key\": \"enderman\",\n    \"ko\": \"엔더맨\",\n    \"is\": \"A tall, thin, black mob with purple eyes and long limbs. It is bipedal and does not have a green body or a frowning face.\"\n   },\n   {\n    \"key\": \"slime\",\n    \"ko\": \"슬라임\",\n    \"is\": \"A translucent, green, cube-shaped mob that bounces. It has a simple face but is not four-legged and does not have the distinct Creeper texture.\"\n   },\n   {\n    \"key\": \"normal_gameplay\",\n    \"ko\": \"평범한 플레이\",\n    \"is\": \"The player is mining, building, or walking in a landscape without any hostile mobs like Creepers visible in the frame.\"\n   }\n  ],\n  \"noul\": {\n   \"instructions\": \"Do these frames show a Creeper from Minecraft?\",\n   \"criteria\": {\n    \"true\": \"A green, four-legged mob with a black face (eyes and frown) is visible. It may be standing, walking, or flashing white.\",\n    \"false\": \"No Creeper is visible. Other mobs (zombies, skeletons, endermen, slimes), players, or green blocks do not count.\"\n   }\n  }\n }\n}",
+ "writer_calls": [
+  {
+   "wall_seconds": 62.3,
+   "prompt_tokens": 8553,
+   "new_tokens": 979,
+   "stop": "eos",
+   "gen_seconds": 62.28,
+   "seconds": 62.3,
+   "first_token_seconds": 3.32,
+   "decode_tok_s": 16.59,
+   "room": 104.0,
+   "peak_gb": 43.5
+  }
+ ],
+ "format_retries": 0
+}

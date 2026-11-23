@@ -1,0 +1,88 @@
+{
+ "writer": "Qwen/Qwen3.8-27B-FP8@c3a462cc (transformers FP8, 생각 끔, 검색 없음)",
+ "request": "로봇이 사탕 컵에 넣는 거 성공한 장면 찾아줘",
+ "facts": [
+  "길이 1:04",
+  "화면 1080×1920"
+ ],
+ "feedback": [],
+ "understanding": "로봇 팔이 사탕을 집어 컵 안으로 떨어뜨려서 성공적으로 넣는 순간을 찾는 것입니다.",
+ "kind": "동작·상태 변화입니다. 사탕이 컵 밖에서 컵 안으로 위치가 바뀌는 과정을 확인해야 하므로 앞뒤 프레임을 함께 봐야 합니다.",
+ "limits": "사탕이 컵 안으로 들어간 후 바로 사라지거나, 컵이 너무 어둡거나 사탕이 작아 구분이 안 되는 경우 놓칠 수 있습니다.",
+ "viewer_request": "the moments where the robot successfully puts a candy into the cup",
+ "questions": {
+  "candy_in_cup": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a candy moving from the robot gripper into the cup?",
+   "criteria": {
+    "true": "A candy is seen leaving the gripper and falling into the cup, ending up inside the cup.",
+    "false": "The candy remains in the gripper, falls outside the cup, or the cup is not visible. The robot is just moving without holding a candy."
+   }
+  },
+  "gripper_open": {
+   "type": "noul",
+   "instructions": "Do these `frames` show the robot gripper opening to release a candy?",
+   "criteria": {
+    "true": "The gripper fingers move apart to release a candy that is positioned above or inside the cup.",
+    "false": "The gripper is closed, empty, or moving without a candy. The gripper is opening but not above the cup."
+   }
+  },
+  "cup_impact": {
+   "type": "score",
+   "instructions": "How clearly does the candy land inside the cup in these `frames`?",
+   "criteria": [
+    "No candy is seen entering or landing in the cup.",
+    "A candy is seen near the cup but not clearly inside it.",
+    "A candy is seen falling into the cup but the final position is unclear.",
+    "A candy is clearly seen landing inside the cup."
+   ]
+  }
+ },
+ "check": {
+  "target": {
+   "key": "successful_drop",
+   "ko": "사탕이 컵 안에 들어감",
+   "is": "A candy is seen falling from the robot gripper and landing inside the cup."
+  },
+  "confusers": [
+   {
+    "key": "holding_candy",
+    "ko": "사탕 들고 이동",
+    "is": "The robot gripper is holding a candy and moving towards the cup, but the candy has not been released yet."
+   },
+   {
+    "key": "missed_drop",
+    "ko": "컵 밖으로 떨어짐",
+    "is": "The robot gripper releases a candy, but it falls outside the cup or hits the rim and bounces away."
+   },
+   {
+    "key": "empty_gripper",
+    "ko": "빈 집게 이동",
+    "is": "The robot gripper is empty and moving around the cup area without holding any candy."
+   }
+  ],
+  "noul": {
+   "instructions": "Do these frames show a candy being released by the robot and landing inside the cup?",
+   "criteria": {
+    "true": "The sequence shows the gripper opening to release a candy, and the candy is seen falling and settling inside the cup.",
+    "false": "The candy is still in the gripper, falls outside the cup, or the gripper is empty. The candy does not end up inside the cup."
+   }
+  }
+ },
+ "raw_reply": "{\n \"understanding\": \"로봇 팔이 사탕을 집어 컵 안으로 떨어뜨려서 성공적으로 넣는 순간을 찾는 것입니다.\",\n \"looked_up\": \"검색하지 않음\",\n \"kind\": \"동작·상태 변화입니다. 사탕이 컵 밖에서 컵 안으로 위치가 바뀌는 과정을 확인해야 하므로 앞뒤 프레임을 함께 봐야 합니다.\",\n \"viewer_request\": \"the moments where the robot successfully puts a candy into the cup\",\n \"questions\": {\n  \"candy_in_cup\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a candy moving from the robot gripper into the cup?\",\n   \"criteria\": {\n    \"true\": \"A candy is seen leaving the gripper and falling into the cup, ending up inside the cup.\",\n    \"false\": \"The candy remains in the gripper, falls outside the cup, or the cup is not visible. The robot is just moving without holding a candy.\"\n   }\n  },\n  \"gripper_open\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show the robot gripper opening to release a candy?\",\n   \"criteria\": {\n    \"true\": \"The gripper fingers move apart to release a candy that is positioned above or inside the cup.\",\n    \"false\": \"The gripper is closed, empty, or moving without a candy. The gripper is opening but not above the cup.\"\n   }\n  },\n  \"cup_impact\": {\n   \"type\": \"score\",\n   \"instructions\": \"How clearly does the candy land inside the cup in these frames?\",\n   \"criteria\": [\n    \"No candy is seen entering or landing in the cup.\",\n    \"A candy is seen near the cup but not clearly inside it.\",\n    \"A candy is seen falling into the cup but the final position is unclear.\",\n    \"A candy is clearly seen landing inside the cup.\"\n   ]\n  }\n },\n \"limits\": \"사탕이 컵 안으로 들어간 후 바로 사라지거나, 컵이 너무 어둡거나 사탕이 작아 구분이 안 되는 경우 놓칠 수 있습니다.\",\n \"check\": {\n  \"target\": {\n   \"key\": \"successful_drop\",\n   \"ko\": \"사탕이 컵 안에 들어감\",\n   \"is\": \"A candy is seen falling from the robot gripper and landing inside the cup.\"\n  },\n  \"confusers\": [\n   {\n    \"key\": \"holding_candy\",\n    \"ko\": \"사탕 들고 이동\",\n    \"is\": \"The robot gripper is holding a candy and moving towards the cup, but the candy has not been released yet.\"\n   },\n   {\n    \"key\": \"missed_drop\",\n    \"ko\": \"컵 밖으로 떨어짐\",\n    \"is\": \"The robot gripper releases a candy, but it falls outside the cup or hits the rim and bounces away.\"\n   },\n   {\n    \"key\": \"empty_gripper\",\n    \"ko\": \"빈 집게 이동\",\n    \"is\": \"The robot gripper is empty and moving around the cup area without holding any candy.\"\n   }\n  ],\n  \"noul\": {\n   \"instructions\": \"Do these frames show a candy being released by the robot and landing inside the cup?\",\n   \"criteria\": {\n    \"true\": \"The sequence shows the gripper opening to release a candy, and the candy is seen falling and settling inside the cup.\",\n    \"false\": \"The candy is still in the gripper, falls outside the cup, or the gripper is empty. The candy does not end up inside the cup.\"\n   }\n  }\n }\n}",
+ "writer_calls": [
+  {
+   "wall_seconds": 52.1,
+   "prompt_tokens": 8561,
+   "new_tokens": 829,
+   "stop": "eos",
+   "gen_seconds": 52.11,
+   "seconds": 52.12,
+   "first_token_seconds": 3.32,
+   "decode_tok_s": 16.97,
+   "room": 101.0,
+   "peak_gb": 43.5
+  }
+ ],
+ "format_retries": 0
+}

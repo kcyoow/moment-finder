@@ -1,0 +1,100 @@
+{
+ "writer": "Qwen/Qwen3.8-27B-FP8@c3a462cc (transformers FP8, 생각 끔, 검색 없음)",
+ "request": "마크 영상인데 싸우는 장면 뽑아줘",
+ "facts": [
+  "길이 4:59",
+  "화면 640×360"
+ ],
+ "feedback": [],
+ "understanding": "마크(Mark)라는 인물이 등장하는 영상에서, 그가 물리적으로 싸우는(주먹질, 발차기, 밀치기 등) 장면을 찾아주세요.",
+ "kind": "동작·상태 변화: 주먹을 휘두르거나 몸을 부딪히는 등 시간 흐름에 따른 움직임이 있어야 싸움으로 판단할 수 있으므로, 앞뒤 프레임 4장을 함께 봐야 한다.",
+ "limits": "주먹을 휘두르지만 맞지 않는 장면이나, 매우 짧은 순간의 밀치기만 있는 장면은 놓칠 수 있습니다. 소리나 의도는 판단하지 않습니다.",
+ "viewer_request": "scenes where Mark is fighting",
+ "questions": {
+  "physical_combat": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a person engaging in physical combat, such as punching, kicking, or grappling with another person?",
+   "criteria": {
+    "true": "A person is seen actively striking (punching, kicking) or physically grappling (wrestling, throwing) with another person.",
+    "false": "No physical combat is shown. This includes people standing still, walking, talking, or gesturing without making contact. It also excludes scenes where people are just running away or being chased without a fight."
+   }
+  },
+  "aggressive_motion": {
+   "type": "score",
+   "instructions": "Rate the intensity of aggressive physical movement in these `frames`.",
+   "criteria": [
+    "No aggressive movement; people are calm or stationary.",
+    "Minor aggressive gestures like pointing or shoving, but no full-blown fight.",
+    "Active physical struggle, such as pushing, pulling, or grappling.",
+    "Intense combat, such as repeated punching, kicking, or throwing."
+   ]
+  },
+  "contact_moment": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a moment where one person makes physical contact with another in an aggressive manner?",
+   "criteria": {
+    "true": "A fist, foot, or body part of one person is seen making contact with another person's body in a forceful way.",
+    "false": "No physical contact between people is shown. This includes open hands waving, standing apart, or non-aggressive touches like a handshake."
+   }
+  }
+ },
+ "check": {
+  "target": {
+   "key": "fighting",
+   "ko": "싸우는 장면",
+   "is": "Two or more people are physically engaging in combat, such as punching, kicking, or grappling. Bodies are in close contact with dynamic, aggressive movements."
+  },
+  "confusers": [
+   {
+    "key": "chasing",
+    "ko": "추격하는 장면",
+    "is": "One person is running after another, but they are not making physical contact or fighting. The distance between them may be closing, but no strikes are exchanged."
+   },
+   {
+    "key": "standing_still",
+    "ko": "서 있는 장면",
+    "is": "People are standing near each other, possibly arguing or looking angry, but there is no physical movement or contact. They are just facing each other."
+   },
+   {
+    "key": "running_away",
+    "ko": "도망치는 장면",
+    "is": "A person is running away quickly, possibly from a threat, but no physical interaction or combat is occurring in the frame."
+   }
+  ],
+  "noul": {
+   "instructions": "Do these frames show a person engaging in physical combat, such as punching, kicking, or grappling with another person?",
+   "criteria": {
+    "true": "A person is seen actively striking (punching, kicking) or physically grappling (wrestling, throwing) with another person.",
+    "false": "No physical combat is shown. This includes people standing still, walking, talking, or gesturing without making contact. It also excludes scenes where people are just running away or being chased without a fight."
+   }
+  }
+ },
+ "raw_reply": "{\n \"understanding\": \"마크(Mark)라는 인물이 등장하는 영상에서, 그가 물리적으로 싸우는(주먹질, 발차기, 밀치기 등) 장면을 찾아주세요.\",\n \"looked_up\": \"검색하지 않음\",\n \"kind\": \"동작·상태 변화: 주먹을 휘두르거나 몸을 부딪히는 등 시간 흐름에 따른 움직임이 있어야 싸움으로 판단할 수 있으므로, 앞뒤 프레임 4장을 함께 봐야 한다.\",\n \"questions\": {\n  \"physical_combat\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a person engaging in physical combat, such as punching, kicking, or grappling with another person?\",\n   \"criteria\": {\n    \"true\": \"A person is seen actively striking (punching, kicking) or physically grappling (wrestling, throwing) with another person.\",\n    \"false\": \"No physical combat is shown. This includes people standing still, walking, talking, or gesturing without making contact. It also excludes scenes where people are just running away or being chased without a fight.\"\n   }\n  },\n  \"aggressive_motion\": {\n   \"type\": \"score\",\n   \"instructions\": \"Rate the intensity of aggressive physical movement in these frames.\",\n   \"criteria\": [\n    \"No aggressive movement; people are calm or stationary.\",\n    \"Minor aggressive gestures like pointing or shoving, but no full-blown fight.\",\n    \"Active physical struggle, such as pushing, pulling, or grappling.\",\n    \"Intense combat, such as repeated punching, kicking, or throwing.\"\n   ]\n  },\n  \"contact_moment\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a moment where one person makes physical contact with another in an aggressive manner?\",\n   \"criteria\": {\n    \"true\": \"A fist, foot, or body part of one person is seen making contact with another person's body in a forceful way.\",\n    \"false\": \"No physical contact between people is shown. This includes open hands waving, standing apart, or non-aggressive touches like a handshake.\"\n   }\n  }\n },\n \"limits\": \"주먹을 휘두르지만 맞지 않는 장면이나, 매우 짧은 순간의 밀치기만 있는 장면은 놓칠 수 있습니다. 소리나 의도는 판단하지 않습니다.\",\n \"viewer_request\": \"scenes where Mark is fighting\",\n \"check\": {\n  \"target\": {\n   \"key\": \"fighting\",\n   \"ko\": \"싸우는 장면\",\n   \"is\": \"Two or more people are physically engaging in combat, such as punching, kicking, or grappling. Bodies are in close contact with dynamic, aggressive movements.\"\n  },\n  \"confusers\": [\n   {\n    \"key\": \"chasing\",\n    \"ko\": \"추격하는 장면\",\n    \"is\": \"One person is running after another, but they are not making physical contact or fighting. The distance between them may be closing, but no strikes are exchanged.\"\n   },\n   {\n    \"key\": \"standing_still\",\n    \"ko\": \"서 있는 장면\",\n    \"is\": \"People are standing near each other, possibly arguing or looking angry, but there is no physical movement or contact. They are just facing each other.\"\n   },\n   {\n    \"key\": \"running_away\",\n    \"ko\": \"도망치는 장면\",\n    \"is\": \"A person is running away quickly, possibly from a threat, but no physical interaction or combat is occurring in the frame.\"\n   }\n  ],\n  \"noul\": {\n   \"instructions\": \"Do these frames show a person engaging in physical combat, such as punching, kicking, or grappling with another person?\",\n   \"criteria\": {\n    \"true\": \"A person is seen actively striking (punching, kicking) or physically grappling (wrestling, throwing) with another person.\",\n    \"false\": \"No physical combat is shown. This includes people standing still, walking, talking, or gesturing without making contact. It also excludes scenes where people are just running away or being chased without a fight.\"\n   }\n  }\n }\n}",
+ "writer_calls": [
+  {
+   "wall_seconds": 50.4,
+   "prompt_tokens": 8552,
+   "new_tokens": 806,
+   "stop": "eos",
+   "gen_seconds": 50.42,
+   "seconds": 50.44,
+   "first_token_seconds": 3.32,
+   "decode_tok_s": 17.09,
+   "room": 99.0,
+   "peak_gb": 43.5
+  },
+  {
+   "wall_seconds": 58.4,
+   "prompt_tokens": 9411,
+   "new_tokens": 924,
+   "stop": "eos",
+   "gen_seconds": 58.34,
+   "seconds": 58.35,
+   "first_token_seconds": 3.66,
+   "decode_tok_s": 16.88,
+   "room": 98.0,
+   "peak_gb": 43.9
+  }
+ ],
+ "format_retries": 1
+}

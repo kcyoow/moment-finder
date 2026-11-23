@@ -1,0 +1,95 @@
+{
+ "writer": "Qwen/Qwen3.8-27B-FP8@c3a462cc (transformers FP8, 생각 끔, 검색 없음)",
+ "request": "로봇이 사탕 컵에 넣는 거 성공한 장면 찾아줘",
+ "facts": [
+  "길이 1:12",
+  "화면 1080×1920"
+ ],
+ "feedback": [],
+ "understanding": "로봇팔이 사탕을 집어 컵 안으로 떨어뜨리는 동작이 성공적으로 완료된 순간을 찾는 것입니다.",
+ "kind": "동작·상태 변화: 사탕이 로봇의 그립에서 분리되어 컵 내부로 이동하는 과정을 확인해야 하므로 앞뒤 프레임이 필요합니다.",
+ "limits": "사탕이 컵에 이미 들어 있거나, 로봇이 사탕을 잡은 채 컵 위에만 멈춰 있는 장면은 '성공'으로 판단되지 않을 수 있습니다. 사탕이 컵 밖으로 떨어지는 실패 장면은 제외됩니다.",
+ "viewer_request": "the moments where the robot successfully puts a candy into the cup",
+ "questions": {
+  "candy_in_cup": {
+   "type": "noul",
+   "instructions": "Do these `frames` show a candy falling from the robot gripper into the cup?",
+   "criteria": {
+    "true": "A candy is visible leaving the robot's gripper and moving towards or landing inside the cup.",
+    "false": "The robot is holding the candy without releasing it, the candy is already in the cup before the sequence starts, the robot is empty-handed, or the candy falls outside the cup."
+   }
+  },
+  "release_moment": {
+   "type": "score",
+   "instructions": "How clearly do these `frames` show the robot releasing a candy towards the cup?",
+   "criteria": [
+    "No candy is being released; the gripper is closed or empty.",
+    "The gripper is open but no candy is visible moving away from it.",
+    "A candy is visible just leaving the gripper, close to the release point.",
+    "A candy is clearly in mid-air, moving from the gripper towards the cup."
+   ]
+  },
+  "cup_target": {
+   "type": "noul",
+   "instructions": "Looking at `frames` together: Is the robot arm positioned over the cup while holding or releasing a candy?",
+   "criteria": {
+    "true": "The robot arm is directly above the cup, and a candy is in the gripper or just released.",
+    "false": "The robot arm is away from the cup, the cup is not visible, or the robot is not holding a candy."
+   }
+  }
+ },
+ "check": {
+  "target": {
+   "key": "success_drop",
+   "ko": "사탕이 컵에 들어감",
+   "is": "A candy is seen falling from the robot gripper into the cup or landing inside the cup."
+  },
+  "confusers": [
+   {
+    "key": "holding_over_cup",
+    "ko": "컵 위에서 사탕 보유",
+    "is": "The robot gripper is holding a candy directly above the cup, but the candy has not yet been released."
+   },
+   {
+    "key": "failed_drop",
+    "ko": "컵 밖으로 떨어짐",
+    "is": "A candy is released from the gripper but falls outside the cup or hits the table."
+   }
+  ],
+  "noul": {
+   "instructions": "Do these frames show a candy successfully falling into the cup from the robot gripper?",
+   "criteria": {
+    "true": "The sequence shows a candy being released by the robot and landing inside the cup.",
+    "false": "The candy is held without release, falls outside the cup, or is not present."
+   }
+  }
+ },
+ "raw_reply": "{\n \"understanding\": \"로봇팔이 사탕을 집어 컵 안으로 떨어뜨리는 동작이 성공적으로 완료된 순간을 찾는 것입니다.\",\n \"looked_up\": \"검색하지 않음\",\n \"kind\": \"동작·상태 변화: 사탕이 로봇의 그립에서 분리되어 컵 내부로 이동하는 과정을 확인해야 하므로 앞뒤 프레임이 필요합니다.\",\n \"viewer_request\": \"the moments where the robot successfully puts a candy into the cup\",\n \"questions\": {\n  \"candy_in_cup\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Do these frames show a candy falling from the robot gripper into the cup?\",\n   \"criteria\": {\n    \"true\": \"A candy is visible leaving the robot's gripper and moving towards or landing inside the cup.\",\n    \"false\": \"The robot is holding the candy without releasing it, the candy is already in the cup before the sequence starts, the robot is empty-handed, or the candy falls outside the cup.\"\n   }\n  },\n  \"release_moment\": {\n   \"type\": \"score\",\n   \"instructions\": \"How clearly do these frames show the robot releasing a candy towards the cup?\",\n   \"criteria\": [\n    \"No candy is being released; the gripper is closed or empty.\",\n    \"The gripper is open but no candy is visible moving away from it.\",\n    \"A candy is visible just leaving the gripper, close to the release point.\",\n    \"A candy is clearly in mid-air, moving from the gripper towards the cup.\"\n   ]\n  },\n  \"cup_target\": {\n   \"type\": \"noul\",\n   \"instructions\": \"Is the robot arm positioned over the cup while holding or releasing a candy?\",\n   \"criteria\": {\n    \"true\": \"The robot arm is directly above the cup, and a candy is in the gripper or just released.\",\n    \"false\": \"The robot arm is away from the cup, the cup is not visible, or the robot is not holding a candy.\"\n   }\n  }\n },\n \"limits\": \"사탕이 컵에 이미 들어 있거나, 로봇이 사탕을 잡은 채 컵 위에만 멈춰 있는 장면은 '성공'으로 판단되지 않을 수 있습니다. 사탕이 컵 밖으로 떨어지는 실패 장면은 제외됩니다.\",\n \"check\": {\n  \"target\": {\n   \"key\": \"success_drop\",\n   \"ko\": \"사탕이 컵에 들어감\",\n   \"is\": \"A candy is seen falling from the robot gripper into the cup or landing inside the cup.\"\n  },\n  \"confusers\": [\n   {\n    \"key\": \"holding_over_cup\",\n    \"ko\": \"컵 위에서 사탕 보유\",\n    \"is\": \"The robot gripper is holding a candy directly above the cup, but the candy has not yet been released.\"\n   },\n   {\n    \"key\": \"failed_drop\",\n    \"ko\": \"컵 밖으로 떨어짐\",\n    \"is\": \"A candy is released from the gripper but falls outside the cup or hits the table.\"\n   }\n  ],\n  \"noul\": {\n   \"instructions\": \"Do these frames show a candy successfully falling into the cup from the robot gripper?\",\n   \"criteria\": {\n    \"true\": \"The sequence shows a candy being released by the robot and landing inside the cup.\",\n    \"false\": \"The candy is held without release, falls outside the cup, or is not present.\"\n   }\n  }\n }\n}",
+ "writer_calls": [
+  {
+   "wall_seconds": 91.3,
+   "prompt_tokens": 8347,
+   "new_tokens": 597,
+   "stop": "time",
+   "gen_seconds": 87.34,
+   "seconds": 87.41,
+   "first_token_seconds": 11.14,
+   "decode_tok_s": 7.82,
+   "room": 87.0,
+   "peak_gb": 43.6
+  },
+  {
+   "wall_seconds": 35.6,
+   "prompt_tokens": 8944,
+   "new_tokens": 195,
+   "stop": "eos",
+   "gen_seconds": 35.38,
+   "seconds": 35.41,
+   "first_token_seconds": 8.95,
+   "decode_tok_s": 7.34,
+   "room": 78.0,
+   "peak_gb": 43.9
+  }
+ ],
+ "format_retries": 0
+}
